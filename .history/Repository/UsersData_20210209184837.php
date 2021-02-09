@@ -2,7 +2,7 @@
 require ('Db.php');
 class UsersData extends Db
 { 
-    public function newUser(string $nom_user, string $prenom_user, string $password, string $email) : object
+    public function newUser(string $nom_user, string $prenom_user, string $password, string $email)
     {
         $sql = "INSERT INTO user (nom_user, prenom_user, email, password) 
                  VALUES (:nom_user, :prenom_user, :email, :password)";

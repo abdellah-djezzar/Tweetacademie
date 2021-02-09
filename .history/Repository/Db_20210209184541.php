@@ -6,7 +6,7 @@ class Db
     private string $pwd = "jeremydubar";
     private string $dbName = "test";
 
-    protected function connect()
+    protected function connect() : array
     {
         $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->dbName;
         $pdo = new PDO($dsn, $this->user, $this->pwd);
