@@ -6,9 +6,3 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Header.php</title>
 </head>
-<?php
-if(isset($_SESSION['id'])){
-  include('views/navigation/membersNavigation.php');
-} else {
-  include('views/navigation/publicNavigation.php');
-}

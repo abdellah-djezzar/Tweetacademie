@@ -13,5 +13,5 @@ if (empty($_GET['action'])) {
 } elseif($_GET['action'] == "home"){
   require('Controllers/HomeController.php');
 } elseif($_GET['action'] == "logout"){
-  require('Controllers/LogoutController.php');
+  requite('Controllers/LogoutController.php');
 }

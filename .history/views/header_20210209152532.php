@@ -9,6 +9,4 @@
 <?php
 if(isset($_SESSION['id'])){
   include('views/navigation/membersNavigation.php');
-} else {
-  include('views/navigation/publicNavigation.php');
 }

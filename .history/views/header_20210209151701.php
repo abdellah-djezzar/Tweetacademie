@@ -6,9 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Header.php</title>
 </head>
-<?php
-if(isset($_SESSION['id'])){
-  include('views/navigation/membersNavigation.php');
-} else {
-  include('views/navigation/publicNavigation.php');
-}
+  <a href="index.php?action=home">Home</a>
+  <a href="index.php?action=register">register</a>
+  <a href="index.php?action=login">Login</a>
