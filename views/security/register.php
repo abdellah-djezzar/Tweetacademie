@@ -1,7 +1,7 @@
 <div class="container-fluid">
      <div class="row">
         <div class="col col-lg-5 d-none d-lg-block">
-            <img src="asset/twitterHom.png" class="img-fluid" alt="Welcome">
+            <img src="public/asset/twitterHom.png" class="img-fluid" alt="Welcome">
         </div>
 
         <div class="col col-lg-6">
@@ -17,7 +17,6 @@
         </div>
       </div>
     </div>
-
   <?php // INTÉGRER LE FORMULAIRE CI DESSOUS QUAND ON CLIQUE SUR "INSCRIRE" AVEC LE CSS DU DESSUS. (MODALES)?>
 
 <form action="" method="POST">
