@@ -1,5 +1,3 @@
-// SCRIPT JS POUR VALIDATION EN COURS. BUG À REGLER AV LE ROUTEUR.
-
 // const MAIL = document.getElementById("email").addEventListener("input", checkMail);
 
 // function checkMail(e) {

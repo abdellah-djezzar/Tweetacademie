@@ -1,12 +1,10 @@
-// SCRIPT JS POUR VALIDATION EN COURS. BUG À REGLER AV LE ROUTEUR.
-
-// const MAIL = document.getElementById("email").addEventListener("input", checkMail);
+// const MAIL = document.getElementById("submit").addEventListener("click", checkMail);
+// // check l'email en direct pour validation coté client.
 
 // function checkMail(e) {
 //   e.preventDefault();
-
 //   const email = document.getElementById("email").value;
-//   fetch("Controllers/ValidationController.php", {
+//   fetch("Controllers/UsersConnection.php", {
 //     method: "GET",
 //     headers: {
 //       "Content-Type": "application/json; charset=utf-8",

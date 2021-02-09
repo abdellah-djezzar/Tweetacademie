@@ -7,6 +7,6 @@
   <input type="text" id="password" name="password">
   <label for="email">email</label>
   <input type="text" id="email" name="email">
-  <input type="submit" id="submit">
+  <input type="submit"email>
 </form>
 <script src="public/scripts/main.js"></script>
