@@ -18,8 +18,7 @@
       </div>
     </div>
 
-  <?php // INTÉGRER LE FORMULAIRE CI DESSOUS QUAND ON CLIQUE SUR "INSCRIRE" AVEC LE CSS DU DESSUS. (MODALES)?>
-
+    <?php // INTÉGRER LE FORMULAIRE CI DESSOUS AVEC LE CSS DU DESSUS. (MODALES)?>
 <form action="" method="POST">
   <label for="name">Nom</label>
   <input type="text" id="name" name="name">
