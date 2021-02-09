@@ -4,7 +4,7 @@ require ('Repository/UsersData.php');
 $usersData = new UsersData;
 
 if(!isset($_SESSION['id'])){
-  header('Location: index.php?action=');
+  header('Location: http://soutenance-epitech.test/test/index.php?action=');
 }
 
 include('views/home/home.php');

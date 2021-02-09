@@ -5,7 +5,7 @@ $usersData = new UsersData;
 // si il a une session on redirige vers la page "home" (la page d'acceuil avec son profil etc) directement
 if (isset($_SESSION['id']))
 {
-    header('Location: index.php?action=home');
+    header('Location: http://soutenance-epitech.test/twitter/index.php?action=home');
 }
 
 // ici un else est possible, mais ça devient vite un "gros bout de code" illisible, donc 2 if sont plus appropriés.
@@ -19,6 +19,6 @@ if (!isset($_SESSION['id']))
         $usersData->newUser($_POST['name'], $_POST['firstname'], $_POST['email'], $_POST['password']);
         // quand les données ont été inséré on appel une autre méthode du controller qui va s'occuper d'aller chercher l'identifiant de l'utilisateur et l'associer à la $_session['id'] (voir la méthode dans le controller "userdata.php")
         $usersData->sessionStart();
-        header('Location: index.php?action=home');
+        header('Location: http://soutenance-epitech.test/twitter/index.php?action=home');
     }
 }

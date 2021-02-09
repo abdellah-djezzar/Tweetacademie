@@ -1,11 +1,11 @@
 <?php
 require ('Db.php');
 class UsersData extends Db
-{ 
+{
     public function newUser($nom_user, $prenom_user, $password, $email)
     {
         $sql = "INSERT INTO user (nom_user, prenom_user, email, password) 
-                 VALUES (:nom_user, :prenom_user, :email, :password)";
+                  VALUES (:nom_user,:prenom_user, :email, :password)";
         $query = $this->connect()
             ->prepare($sql);
         $query->execute(["nom_user" => $nom_user, "prenom_user" => $prenom_user, "email" => $email, "password" => $password, ]);
@@ -22,5 +22,5 @@ class UsersData extends Db
         $result = $query->fetch();
         $_SESSION['id'] = $result['id_user'];
     }
-
 }
+
