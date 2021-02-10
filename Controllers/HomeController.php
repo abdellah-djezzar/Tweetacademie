@@ -16,5 +16,6 @@ $UserModel = new Member;
 
 // getUser[0] = l'id de l'utilisateur récupéré dans l'objet au dessus.
 $UserModel->hydrate($getUser[0]);
+var_dump($UserModel);
 
 include('views/home/home.php');

@@ -36,4 +36,37 @@ class UsersData extends Db
         var_dump($query);
         return $query->fetchAll(PDO::FETCH_ASSOC);
     }
+
+
+    public function userLogin(string $email, string $password)
+    {
+        $sql = "SELECT * FROM user WHERE email = :email AND password = :password";
+        $query = $this->connect()->prepare($sql);
+        $query->execute([
+            "email" => $email,
+            "password" => $password
+        ]);
+        return $query->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function sessionStartLogIn($id_user)
+    {
+        $sql = "SELECT id_user FROM user WHERE id_user = $id_user";
+        $query = $this->connect()->prepare($sql);
+        $query->execute([
+            "id_user" => $id_user
+        ]);
+        $result = $query->fetch();
+        $_SESSION['id'] = $result['id_user'];
+    }
+
+    public function getAllFromUserByEmail($email)
+    {
+        $sql = "SELECT * FROM user WHERE email = :email";
+        $query = $this->connect()->prepare($sql);
+        $query->execute([
+            "email" => $email
+        ]);
+        return $query->fetchAll(PDO::FETCH_ASSOC);
+    }
 }

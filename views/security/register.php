@@ -19,6 +19,7 @@
     </div>
   <?php // INTÉGRER LE FORMULAIRE CI DESSOUS QUAND ON CLIQUE SUR "INSCRIRE" AVEC LE CSS DU DESSUS. (MODALES)?>
 
+<!-- S'enregistrer -->
 <form action="" method="POST">
   <label for="name">Nom</label>
   <input type="text" id="name" name="name">
@@ -28,7 +29,20 @@
   <input type="text" id="password" name="password">
   <label for="email">email</label>
   <input type="text" id="email" name="email">
-  <input type="submit" id="submit">
+  <input type="hidden" name="register" />
+  <input type="submit">
 </form>
+
+<!---Se connecter -->
+<form  action="" method="POST">
+<label for="emailLogin">Addresse mail</label>
+<input type="email" id="emailLogin" name="emailLogin">
+<label for="passwordLogin">Mot de passe</label>
+<input type="text" id="passwordLogin" name="passwordLogin">
+<input type="hidden" name="login">
+<button type="submit" id="submit">Valider</button>
+</form>
+
+
 
 <script src="public/scripts/main.js"></script>
