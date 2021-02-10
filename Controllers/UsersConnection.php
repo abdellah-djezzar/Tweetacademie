@@ -44,14 +44,3 @@ if (!isset($_SESSION['id']))
         }
     }
 }
-
-// if (isset($_POST) && !empty($_POST)) {
-//     $user = $userRepository->UserLogin($_POST['email']);
-//     $hash = $user[0]['password'];
-//     if (password_verify($_POST['password'], $hash)) {
-//       $userRepository->sessionStartLogIn($user[0]['id']);
-//       header('Location: http://soutenance-epitech.test/my_meetic/index.php?action=home');
-//     } else {
-//       echo "identifiants incorrect";
-//     }
-//   }
