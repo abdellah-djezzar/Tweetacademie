@@ -23,7 +23,7 @@ if (!isset($_SESSION['id']))
         $usersData->newUser($_POST['name'], $_POST['firstname'], $HashedPassword, $_POST['email']);
         // quand les données ont été inséré on appel une autre méthode du controller qui va s'occuper d'aller chercher l'identifiant de l'utilisateur et l'associer à la $_session['id'] (voir la méthode dans le controller "userdata.php")
 
-        $usersData->sessionStart();  
+        $usersData->sessionStart();
         header('Location: index.php?action=home');
     }
 

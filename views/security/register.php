@@ -30,7 +30,7 @@
   <label for="email">email</label>
   <input type="text" id="email" name="email">
   <input type="hidden" name="register" />
-  <input type="submit">
+  <input type="submit" id="test">
 </form>
 
 <!---Se connecter -->

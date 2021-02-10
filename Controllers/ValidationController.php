@@ -1,12 +1,6 @@
 <?php
-// header('Content-Type: application/json');
-
-// if($_GET["action"] == "email") {
-//   echo json_encode("mail existant");
-// }else {
-//   echo json_encode("ok");
-// }
-
-// NE PAS EFFACER
-
-// et là c'est juste un commentaire pour ne rien dire :-)
+if($_GET["action"]) {
+  echo json_encode("mail ok");
+}else {
+  echo json_encode("ok");
+}
