@@ -2,10 +2,12 @@
 
 class Member 
 {
-  private string $nom_user;
-  private string $prenom_user;
-  private string $password;
+  private string $lastname;
+  private string $firstname;
+  private string $username;
+  private  $dob;
   private string $email;
+  private string $password;
 
 
   public function hydrate(array $donnees)
@@ -22,50 +24,123 @@ class Member
   }
   }
 
-  public function getNom_user(): string 
+
+  /**
+   * Get the value of lastname
+   */ 
+  public function getLastname()
   {
-    return $this->nom_user;
+    return $this->lastname;
   }
 
-  public function setNom_user($nom_user): self 
+  /**
+   * Set the value of lastname
+   *
+   * @return  self
+   */ 
+  public function setLastname($lastname)
   {
-    $this->nom_user = $nom_user;
+    $this->lastname = $lastname;
 
     return $this;
   }
 
-  public function getPrenom_user(): string
+  /**
+   * Get the value of firstname
+   */ 
+  public function getFirstname()
   {
-    return $this->prenom_user;
+    return $this->firstname;
   }
 
-  public function setPrenom_user($prenom_user): self 
+  /**
+   * Set the value of firstname
+   *
+   * @return  self
+   */ 
+  public function setFirstname($firstname)
   {
-    $this->prenom_user = $prenom_user;
+    $this->firstname = $firstname;
 
     return $this;
   }
 
-  public function getPassword(): string
+  /**
+   * Get the value of username
+   */ 
+  public function getUsername()
   {
-    return $this->password;
+    return $this->username;
   }
 
-  public function setPassword($password): self
+  /**
+   * Set the value of username
+   *
+   * @return  self
+   */ 
+  public function setUsername($username)
   {
-    $this->password = $password;
+    $this->username = $username;
 
     return $this;
   }
 
-  public function getEmail(): string
+  /**
+   * Get the value of dob
+   */ 
+  public function getDob()
+  {
+    return $this->dob;
+  }
+
+  /**
+   * Set the value of dob
+   *
+   * @return  self
+   */ 
+  public function setDob($dob)
+  {
+    $this->dob = $dob;
+
+    return $this;
+  }
+
+  /**
+   * Get the value of email
+   */ 
+  public function getEmail()
   {
     return $this->email;
   }
 
-  public function setEmail($email): self
+  /**
+   * Set the value of email
+   *
+   * @return  self
+   */ 
+  public function setEmail($email)
   {
     $this->email = $email;
+
+    return $this;
+  }
+
+  /**
+   * Get the value of password
+   */ 
+  public function getPassword()
+  {
+    return $this->password;
+  }
+
+  /**
+   * Set the value of password
+   *
+   * @return  self
+   */ 
+  public function setPassword($password)
+  {
+    $this->password = $password;
 
     return $this;
   }
