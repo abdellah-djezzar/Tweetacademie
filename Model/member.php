@@ -5,7 +5,7 @@ class Member
   private string $lastname;
   private string $firstname;
   private string $username;
-  private  $dob;
+  private $dob;
   private string $email;
   private string $password;
 
