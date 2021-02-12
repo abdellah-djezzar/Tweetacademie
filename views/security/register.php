@@ -35,6 +35,4 @@
    <input type="text" id="email" name="email">
    <input type="hidden" name="register" />
    <input type="submit" id="test">
-</form> 
-<script src="public/scripts/main.js"></script>
-
+</form>
