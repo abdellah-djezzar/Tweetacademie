@@ -17,3 +17,4 @@ if(isset($_SESSION['id'])){
 } else {
   include('views/navigation/publicNavigation.php');
 }
+

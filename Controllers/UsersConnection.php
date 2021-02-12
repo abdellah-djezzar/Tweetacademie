@@ -8,8 +8,6 @@ if (isset($_SESSION['id']))
     header('Location: index.php?action=home');
 }
 
-if (!isset($_SESSION['id']))
-{
     include ('views/security/register.php');
     if (isset($_POST["register"])){
         $HashedPassword = password_hash($_POST['password'], PASSWORD_DEFAULT);
@@ -23,8 +21,8 @@ if (!isset($_SESSION['id']))
     if (isset($_POST["login"])){
         
         $getUserInfos = $usersData->getAllFromUserByEmail($_POST['emailLogin']); 
-        $checkPassword = $getUserInfos[0]["password"];
-        $userId = $getUserInfos[0]["id"];
+        $checkPassword = $getUserInfos["password"];
+        $userId = $getUserInfos["id"];
         if(password_verify($_POST['passwordLogin'], $checkPassword)){
 
             $usersData->userLogin($_POST['emailLogin'], $_POST['passwordLogin']);
@@ -32,4 +30,3 @@ if (!isset($_SESSION['id']))
             header('Location: index.php?action=home');
         }
     }
-}
