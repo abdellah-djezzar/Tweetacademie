@@ -24,8 +24,10 @@
    <input type="text" id="name" name="name">
    <label for="firstname">prénom</label>
    <input type="text" id="firstname" name="firstname">
-   <label for="username">pseudo</label>
+   <label for="username">username</label>
    <input type="text" id="username" name="username">
+   <label for="pseudo">pseudo</label>
+   <input type="text" id="pseudo" name="pseudo">
    <label for="dob">DOB</label>
    <input type="date" id="dob" name="dob">
    <label for="password">password</label>

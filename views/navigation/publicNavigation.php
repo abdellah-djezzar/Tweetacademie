@@ -9,7 +9,7 @@
         <a class="nav-link" href="index.php?action=login">Login</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="index.php?action=login">Home</a>
+        <a class="nav-link" href="index.php?action=Home">Home</a>
       </li>
     </ul>
   </div>

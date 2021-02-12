@@ -18,5 +18,9 @@ if (empty($_GET['action'])) {
   require('Controllers/HomeController.php');
 } elseif($_GET['action'] == "logout"){
   require('Controllers/LogoutController.php');
+} elseif($_GET['action'] == "profil"){
+  require('Controllers/ProfilController.php');
 }
+
+var_dump($_GET);
 require('../twitter/views/footer.php');

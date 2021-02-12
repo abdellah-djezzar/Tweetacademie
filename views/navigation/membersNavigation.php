@@ -9,7 +9,7 @@
       <a  class="nav-link" href="index.php?action=home">Home</a>
       </li>
       <li class="nav-item">
-      <a  class="nav-link" href="index.php?action=logout">Mon profil</a>
+      <a  class="nav-link" href="index.php?action=profil">Mon profil</a>
       </li>
       <li class="nav-item">
       <a class="nav-link" href="index.php?action=logout">Se deconnecter</a>

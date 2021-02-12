@@ -12,7 +12,7 @@ if (isset($_SESSION['id']))
     if (isset($_POST["register"])){
         $HashedPassword = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-        $usersData->newUser($_POST['name'], $_POST['firstname'], $_POST['username'], $_POST['dob'], $_POST['email'], $HashedPassword);
+        $usersData->newUser($_POST['name'], $_POST['firstname'], $_POST['username'], $_POST['pseudo'], $_POST['dob'], $_POST['email'], $HashedPassword);
         var_dump($usersData);
         $usersData->sessionStart();
         header('Location: index.php?action=home');
