@@ -5,6 +5,7 @@ class Member
   private string $lastname;
   private string $firstname;
   private string $username;
+  private string $pseudo;
   private $dob;
   private string $email;
   private string $password;
@@ -65,19 +66,11 @@ class Member
     return $this;
   }
 
-  /**
-   * Get the value of username
-   */ 
   public function getUsername()
   {
     return $this->username;
   }
 
-  /**
-   * Set the value of username
-   *
-   * @return  self
-   */ 
   public function setUsername($username)
   {
     $this->username = $username;
@@ -85,9 +78,18 @@ class Member
     return $this;
   }
 
-  /**
-   * Get the value of dob
-   */ 
+  public function getPseudo()
+  {
+    return $this->pseudo;
+  }
+
+  public function setPseudo($pseudo)
+  {
+    $this->pseudo = $pseudo;
+
+    return $this;
+  }
+
   public function getDob()
   {
     return $this->dob;
