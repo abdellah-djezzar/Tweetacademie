@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@900&display=swap" rel="stylesheet">
   <title>Header.php</title>
 </head>
+<body>
 <?php
 if(isset($_SESSION['id'])){
   include('views/navigation/membersNavigation.php');

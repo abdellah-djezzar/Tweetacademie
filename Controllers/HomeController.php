@@ -5,7 +5,7 @@ $usersData = new UsersData;
 $getUser = $usersData->getUserById($_SESSION["id"]);
 
 if(empty($_SESSION['id'])){
-  header('Location: index.php?action=');
+  header('Location: index.php');
 } 
 
     $UserModel = new Member;

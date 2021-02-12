@@ -22,5 +22,4 @@ if (empty($_GET['action'])) {
   require('Controllers/ProfilController.php');
 }
 
-var_dump($_GET);
 require('../twitter/views/footer.php');
