@@ -17,16 +17,3 @@ if (isset($_SESSION['id']))
         $usersData->sessionStart();
         header('Location: index.php?action=home');
     }
-
-    if (isset($_POST["login"])){
-        
-        $getUserInfos = $usersData->getAllFromUserByEmail($_POST['emailLogin']); 
-        $checkPassword = $getUserInfos["password"];
-        $userId = $getUserInfos["id"];
-        if(password_verify($_POST['passwordLogin'], $checkPassword)){
-
-            $usersData->userLogin($_POST['emailLogin'], $_POST['passwordLogin']);
-            $usersData->sessionStartLogIn($userId);
-            header('Location: index.php?action=home');
-        }
-    }
