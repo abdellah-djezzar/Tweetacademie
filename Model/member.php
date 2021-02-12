@@ -80,12 +80,12 @@ class Member
 
   public function getPseudo()
   {
-    return $this->username;
+    return $this->pseudo;
   }
 
-  public function setPseudo($username)
+  public function setPseudo($pseudo)
   {
-    $this->username = $username;
+    $this->pseudo = $pseudo;
 
     return $this;
   }
