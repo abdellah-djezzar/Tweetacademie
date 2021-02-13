@@ -1,7 +1,7 @@
 <?php
-require ('Repository/UsersData.php');
+require ('Repository/UsersDataRepository.php');
 require ('Model/member.php');
-$usersData = new UsersData;
+$UsersDataRepository = new UsersData;
 
 if (isset($_SESSION['id']))
 {
@@ -9,13 +9,13 @@ if (isset($_SESSION['id']))
 }
 if (isset($_POST["login"])){
         
-  $getUserInfos = $usersData->getAllFromUserByEmail($_POST['emailLogin']); 
+  $getUserInfos = $UsersDataRepository->getAllFromUserByEmail($_POST['emailLogin']); 
   $checkPassword = $getUserInfos["password"];
   $userId = $getUserInfos["ID_user"];
   if(password_verify($_POST['passwordLogin'], $checkPassword)){
 
-      $usersData->userLogin($_POST['emailLogin'], $_POST['passwordLogin']);
-      $usersData->sessionStartLogIn($userId);
+      $UsersDataRepository->userLogin($_POST['emailLogin'], $_POST['passwordLogin']);
+      $UsersDataRepository->sessionStartLogIn($userId);
       header('Location: index.php?action=home');
   }
 }

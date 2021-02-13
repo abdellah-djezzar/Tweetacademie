@@ -14,76 +14,56 @@ class Member
   public function hydrate(array $donnees)
   {
     foreach ($donnees as $key => $value) {
-      // On récupère le nom du setter correspondant à l'attribut.
       $method = 'set' . ucfirst($key);
 
-      // Si le setter correspondant existe.
       if (method_exists($this, $method)) {
-          // On appelle le setter.
           $this->$method($value);
       }
   }
   }
 
-
-  /**
-   * Get the value of lastname
-   */ 
-  public function getLastname()
+  public function getLastname() : string
   {
     return $this->lastname;
   }
 
-  /**
-   * Set the value of lastname
-   *
-   * @return  self
-   */ 
-  public function setLastname($lastname)
+  public function setLastname(string $lastname) : self
   {
     $this->lastname = $lastname;
 
     return $this;
   }
 
-  /**
-   * Get the value of firstname
-   */ 
-  public function getFirstname()
+  public function getFirstname() : string
   {
     return $this->firstname;
   }
 
-  /**
-   * Set the value of firstname
-   *
-   * @return  self
-   */ 
-  public function setFirstname($firstname)
+  public function setFirstname(string $firstname) : self
   {
     $this->firstname = $firstname;
 
     return $this;
   }
 
-  public function getUsername()
+  public function getUsername() : string
   {
     return $this->username;
   }
 
-  public function setUsername($username)
+  public function setUsername(string $username) : self
   {
     $this->username = $username;
 
     return $this;
   }
 
-  public function getPseudo()
+  public function getPseudo() : string
   {
     return $this->pseudo;
   }
 
-  public function setPseudo($pseudo)
+  public function setPseudo(string $pseudo)
   {
     $this->pseudo = $pseudo;
 
@@ -95,52 +75,31 @@ class Member
     return $this->dob;
   }
 
-  /**
-   * Set the value of dob
-   *
-   * @return  self
-   */ 
-  public function setDob($dob)
+  public function setDob($dob) : self
   {
     $this->dob = $dob;
 
     return $this;
   }
-
-  /**
-   * Get the value of email
-   */ 
-  public function getEmail()
+ 
+  public function getEmail() : string
   {
     return $this->email;
   }
 
-  /**
-   * Set the value of email
-   *
-   * @return  self
-   */ 
-  public function setEmail($email)
+  public function setEmail(string $email) : self 
   {
     $this->email = $email;
 
     return $this;
   }
 
-  /**
-   * Get the value of password
-   */ 
-  public function getPassword()
+  public function getPassword() : string 
   {
     return $this->password;
   }
 
-  /**
-   * Set the value of password
-   *
-   * @return  self
-   */ 
-  public function setPassword($password)
+  public function setPassword(string $password) : self 
   {
     $this->password = $password;
 

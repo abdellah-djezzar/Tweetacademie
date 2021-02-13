@@ -1,11 +1,11 @@
 <?php
 require ('Model/member.php');
-require ('Repository/UsersData.php');
-$usersData = new UsersData;
-$getUser = $usersData->getUserById($_SESSION["id"]);
+require ('Repository/UsersDataRepository.php');
+$UsersDataRepository = new UsersData;
+$getUser = $UsersDataRepository->getUserById($_SESSION["id"]);
 
 if(empty($_SESSION['id'])){
-  header('Location: index.php');
+  header('Location: index.php?action=');
 } 
 
     $UserModel = new Member;

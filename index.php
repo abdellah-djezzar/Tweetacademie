@@ -21,5 +21,4 @@ if (empty($_GET['action'])) {
 } elseif($_GET['action'] == "profil"){
   require('Controllers/ProfilController.php');
 }
-
 require('../twitter/views/footer.php');

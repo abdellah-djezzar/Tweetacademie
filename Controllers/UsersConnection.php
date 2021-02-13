@@ -1,7 +1,7 @@
 <?php
-require ('Repository/UsersData.php');
+require ('Repository/UsersDataRepository.php');
 require ('Model/member.php');
-$usersData = new UsersData;
+$UsersDataRepository = new UsersData;
 
 if (isset($_SESSION['id']))
 {
@@ -12,7 +12,15 @@ if (isset($_SESSION['id']))
     if (isset($_POST["register"])){
         $HashedPassword = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-        $usersData->newUser($_POST['name'], $_POST['firstname'], $_POST['username'], $_POST['pseudo'], $_POST['dob'], $_POST['email'], $HashedPassword);
-        $usersData->sessionStart();
+        $UsersDataRepository->newUser(
+            $_POST['name'], 
+            $_POST['firstname'], 
+            $_POST['username'], 
+            $_POST['pseudo'], 
+            $_POST['dob'], 
+            $_POST['email'], 
+            $HashedPassword
+        );
+        $UsersDataRepository->sessionStart();
         header('Location: index.php?action=home');
     }
