@@ -7,7 +7,6 @@ if (isset($_SESSION['id']))
 {
     header('Location: index.php');
 }
-
     include ('views/security/register.php');
     if (isset($_POST["register"])){
         $HashedPassword = password_hash($_POST['password'], PASSWORD_DEFAULT);
