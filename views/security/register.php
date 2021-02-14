@@ -14,7 +14,7 @@
          </div>
 
          <div class="form-group">
-         <input class="w-100" type="text" id="email" name="email" placeholder="Addresse e-mail">
+         <input class="w-100" type="text" id="email" name="email" placeholder="Addresse e-mail" autocomplete="off">
          <span id="error"></span>
          </div>
 

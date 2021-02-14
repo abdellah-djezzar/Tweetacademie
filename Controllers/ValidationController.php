@@ -3,8 +3,8 @@ require ('Repository/UsersDataRepository.php');
 $UsersDataRepository = new UsersData;
 $validation = $UsersDataRepository->getAllFromUserByEmail($_GET["email"]);
 
-if($_GET["email"] == $validation["email"]) { //
-  echo json_encode("email existant");
-} else {
+if(empty($validation)) { //
   echo json_encode("ok");
+} else {
+  echo json_encode("e mail existant");
 }

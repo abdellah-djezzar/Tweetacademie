@@ -1,5 +1,4 @@
 const MAIL = document.getElementById("email").addEventListener("keyup", checkMail);
-
 function checkMail(e) {
   e.preventDefault();
 
@@ -14,10 +13,10 @@ function checkMail(e) {
 
     .then((data) => {
       console.log(data);
-      if (data == "email existant") {
+      if (data == "e mail existant") {
         document.getElementById("error").innerHTML = "l'email existe déjà!";
       } else {
-        document.getElementById("error").innerHTML = "l'emaià!";
+        document.getElementById("error").innerHTML = "valide";
       }
     })
 

@@ -1,54 +1,9 @@
 <div class="container">
-  <form class="d-flex flex-wrap justify-content-end">
-  <input class="form-group add-tweet" type="text" placeholder="What's happening ?">
-  <input type="submit" value="envoyer">
+  <form method="POST" action="" class="d-flex flex-wrap justify-content-end" id="regForm">
+  <input  type="text" id="postTweet"  name="postTweet" class="form-group add-tweet" placeholder="What's happening ?">
+  <input type="submit" value="envoyer" id="submitTweet">
   </form>
-<div class="tweet">
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo quidem illo ad dolor blanditiis voluptas? Ut vitae tempore soluta error architecto</p>
-</div>
-<div class="tweet">
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo quidem illo ad dolor blanditiis voluptas? Ut vitae tempore soluta error architecto</p>
-</div>
-<div class="tweet">
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo quidem illo ad dolor blanditiis voluptas? Ut vitae tempore soluta error architecto</p>
-</div>
-<div class="tweet">
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo quidem illo ad dolor blanditiis voluptas? Ut vitae tempore soluta error architecto</p>
-</div>
-<div class="tweet">
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo quidem illo ad dolor blanditiis voluptas? Ut vitae tempore soluta error architecto</p>
-</div>
-<div class="tweet">
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo quidem illo ad dolor blanditiis voluptas? Ut vitae tempore soluta error architecto</p>
-</div>
-<div class="tweet">
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo quidem illo ad dolor blanditiis voluptas? Ut vitae tempore soluta error architecto</p>
-</div>
-<div class="tweet">
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo quidem illo ad dolor blanditiis voluptas? Ut vitae tempore soluta error architecto</p>
-</div>
-<div class="tweet">
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo quidem illo ad dolor blanditiis voluptas? Ut vitae tempore soluta error architecto</p>
-</div>
-<div class="tweet">
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo quidem illo ad dolor blanditiis voluptas? Ut vitae tempore soluta error architecto</p>
-</div>
-<div class="tweet">
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo quidem illo ad dolor blanditiis voluptas? Ut vitae tempore soluta error architecto</p>
-</div>
-<div class="tweet">
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo quidem illo ad dolor blanditiis voluptas? Ut vitae tempore soluta error architecto</p>
-</div>
-<div class="tweet">
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo quidem illo ad dolor blanditiis voluptas? Ut vitae tempore soluta error architecto</p>
-</div>
-<div class="tweet">
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo quidem illo ad dolor blanditiis voluptas? Ut vitae tempore soluta error architecto</p>
-</div>
-<div class="tweet">
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo quidem illo ad dolor blanditiis voluptas? Ut vitae tempore soluta error architecto</p>
-</div>
-<div class="tweet">
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo quidem illo ad dolor blanditiis voluptas? Ut vitae tempore soluta error architecto</p>
+<div class="wrap" id="wrap">
+  <p id="tweet-value"></p>
 </div>
 </div>

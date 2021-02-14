@@ -4,6 +4,12 @@ session_start();
   if(!empty($_GET['action']) && $_GET['action'] == "validation"){
     require('Controllers/ValidationController.php');
     exit;
+}elseif(!empty($_GET['action'] && $_GET['action'] == "gettweets")){
+    require('Controllers/ShowTweetsController.php');
+    exit;
+}elseif(!empty($_GET['action'] && $_GET['action'] == "saveTweet")){
+    require('Controllers/SaveTweetsController.php');
+    exit;
 }
 
 
