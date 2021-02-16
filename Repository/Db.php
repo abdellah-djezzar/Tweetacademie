@@ -2,8 +2,8 @@
 class Db
 {
     private string $host = "localhost";
-    private string $user = "admin";
-    private string $pwd = "jeremydubar";
+    private string $user = "abdellah";
+    private string $pwd = "abdellah";
     private string $dbName = "my_twitter";
 
     protected function connect()
