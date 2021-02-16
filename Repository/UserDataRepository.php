@@ -1,14 +1,22 @@
 <?php
 require ('Db.php');
-class UsersData extends Db
+class UserDataRepository extends Db
 { 
-    public function newUser(string $lastname, string $firstname, string $username, string $pseudo, $dob, string $password, string $email): object
+    public function newUser(string $lastname, string $firstname, string $username, string $pseudo, $dob, string $password, string $email)
     {
         $sql = "INSERT INTO user (lastname, firstname, username, pseudo, dob, email, password) 
                  VALUES (:lastname, :firstname, :username, :pseudo, :dob, :password, :email)";
         $query = $this->connect()
             ->prepare($sql);
-        $query->execute(["lastname" => $lastname, "firstname" => $firstname, "username" => $username, "pseudo" => $pseudo, "dob" => $dob, "email" => $email, "password" => $password]);
+        $query->execute([
+            "lastname" => $lastname, 
+            "firstname" => $firstname, 
+            "username" => $username, 
+            "pseudo" => $pseudo, 
+            "dob" => $dob, 
+            "email" => $email, 
+            "password" => $password
+        ]);
         return $query;
     }
 
@@ -28,11 +36,11 @@ class UsersData extends Db
         $query->execute([
             "id_user" => $id_user
         ]);
-        return $query->fetchAll(PDO::FETCH_ASSOC);
+        return $query->fetch(PDO::FETCH_ASSOC);
     }
 
 
-    public function userLogin(string $email, string $password)
+    public function userLogin(string $email, string $password) :array
     {
         $sql = "SELECT * FROM user WHERE email = :email AND password = :password";
         $query = $this->connect()->prepare($sql);
@@ -43,7 +51,7 @@ class UsersData extends Db
         return $query->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function sessionStartLogIn($id)
+    public function sessionStartLogIn(string $id)
     {
         $sql = "SELECT ID_user FROM user WHERE ID_user = :id";
         $query = $this->connect()->prepare($sql);
@@ -52,10 +60,9 @@ class UsersData extends Db
         ]);
         $result = $query->fetch();
         $_SESSION['id'] = $result['ID_user'];
-        var_dump($_SESSION['id']);
     }
 
-    public function getAllFromUserByEmail($email)
+    public function getAllFromUserByEmail(string $email)
     {
         $sql = "SELECT * FROM user WHERE email = :email";
         $query = $this->connect()->prepare($sql);

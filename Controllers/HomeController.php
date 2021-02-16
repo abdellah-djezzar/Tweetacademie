@@ -4,16 +4,14 @@ if(empty($_SESSION['id'])){
 }
 
 require ('Model/member.php');
-require ('Repository/UsersDataRepository.php');
+require ('Repository/UserDataRepository.php');
 require ('Repository/TweetsRepository.php');
-$UsersDataRepository = new UsersData;
-$UserModel = new Member;
+$UserDataRepository = new UserDataRepository;
 $TweetRepository = new TweetsRepository();
 
 // hydratation 
-$getUser = $UsersDataRepository->getUserById($_SESSION["id"]);
-$UserModel->hydrate($getUser[0]);
-
+$newMember = $UserDataRepository->getUserById($_SESSION["id"]);
+$Member = new Member($newMember);
 // postTweet
 
 include('views/home/home.php');

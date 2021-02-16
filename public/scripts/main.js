@@ -13,7 +13,7 @@ function checkMail(e) {
 
     .then((data) => {
       console.log(data);
-      if (data == "e mail existant") {
+      if (data == "not valid") {
         document.getElementById("error").innerHTML = "l'email existe déjà!";
       } else {
         document.getElementById("error").innerHTML = "valide";

@@ -1,13 +1,12 @@
 <?php 
 session_start();
-
   if(!empty($_GET['action']) && $_GET['action'] == "validation"){
     require('Controllers/ValidationController.php');
     exit;
-}elseif(!empty($_GET['action'] && $_GET['action'] == "gettweets")){
+} elseif(!empty($_GET['action']) && ($_GET['action'] == "gettweets")){
     require('Controllers/ShowTweetsController.php');
     exit;
-}elseif(!empty($_GET['action'] && $_GET['action'] == "saveTweet")){
+} elseif(!empty($_GET['action']) && ($_GET['action'] == "saveTweet")){
     require('Controllers/SaveTweetsController.php');
     exit;
 }
@@ -26,5 +25,7 @@ if (empty($_GET['action'])) {
   require('Controllers/LogoutController.php');
 } elseif($_GET['action'] == "profil"){
   require('Controllers/ProfilController.php');
+} elseif($_GET['action'] == "profilOtherMember"){
+  require('Controllers/profilOtherMemberController.php');
 }
 require('../twitter/views/footer.php');
