@@ -9,8 +9,10 @@ session_start();
 } elseif(!empty($_GET['action']) && ($_GET['action'] == "saveTweet")){
     require('Controllers/SaveTweetsController.php');
     exit;
+} elseif(!empty($_GET['action']) && ($_GET['action'] == "subscribe")){
+    require('Controllers/SubscribeController.php');
+    exit;
 }
-
 
 require('../twitter/views/header.php');
 if (empty($_GET['action'])) {
@@ -28,4 +30,5 @@ if (empty($_GET['action'])) {
 } elseif($_GET['action'] == "profilOtherMember"){
   require('Controllers/profilOtherMemberController.php');
 }
+
 require('../twitter/views/footer.php');

@@ -19,13 +19,6 @@ $TweetRepository = new TweetsRepository;
 // hydratation
 $newMember = $UserDataRepository->getUserById($_SESSION["id"]);
 $member = new Member($newMember);
-echo"<br>";
-echo"<br>";
-echo"<br>";
-
-echo "<pre>";
-print_r($member);
-echo "</pre>";
 
 // countTweet
 $userId = $newMember["ID_user"];

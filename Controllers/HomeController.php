@@ -13,5 +13,4 @@ $TweetRepository = new TweetsRepository();
 $newMember = $UserDataRepository->getUserById($_SESSION["id"]);
 $Member = new Member($newMember);
 // postTweet
-
 include('views/home/home.php');

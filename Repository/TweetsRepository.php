@@ -43,7 +43,8 @@ class TweetsRepository extends Db {
 
   public function followAMember(string $id_following, string $id_user)
   {
-    $sql = "INSERT INTO follow (id_following, ID_user) VALUES (:id_following, :id_user)";
+    $sql = "INSERT INTO follow (id_following, ID_user) 
+    VALUES (:id_following, :id_user)";
     $query = $this->connect()->prepare($sql);
     $query->execute([
       "id_following" => $id_following,
@@ -74,9 +75,7 @@ class TweetsRepository extends Db {
     ]);
 
     return $query->fetchAll(PDO::FETCH_ASSOC);
-  }
-
-  
+  } 
 
   public function countFollowing(string $id_user) :array
   {
@@ -90,4 +89,5 @@ class TweetsRepository extends Db {
 
   // montrer les personnes que je suis  (que je follow)
   //SELECT pseudo from user INNER JOIN follow ON follow.ID_user = user.ID_user WHERE follow.ID_user = 2
+
 }

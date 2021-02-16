@@ -8,5 +8,6 @@
     <script src="public/scripts/main.js"></script>
     <script src="public/scripts/postTweet.js"></script>
     <script src="public/scripts/likeTweet.js"></script>
+    <script src="public/scripts/subscribe.js"></script>
 </body>
 </html>
