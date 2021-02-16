@@ -18,7 +18,11 @@ if (isset($_SESSION['id']))
             $_POST['pseudo'], 
             $_POST['dob'], 
             $_POST['email'], 
-            $HashedPassword
+            $HashedPassword,
+            $_POST['bio'],
+            $_POST['city'],
+            $_POST['link'],
+            $_POST['deleted'],
         );
         $UserDataRepository->sessionStart();
         header('Location: index.php?action=home');

@@ -61,6 +61,23 @@ class TweetsRepository extends Db {
     return $query->fetchAll();
   }
 
+  public function getAllFromFollowing(string $id_user) : array
+  {
+    $sql = "SELECT * FROM follow 
+            INNER JOIN user ON id_following = user.ID_user  
+            INNER JOIN tweet ON tweet.ID_user = user.ID_user 
+            WHERE follow.ID_user = :id_user";
+    
+    $query = $this->connect()->prepare($sql);
+    $query->execute([
+      "id_user" => $id_user
+    ]);
+
+    return $query->fetchAll(PDO::FETCH_ASSOC);
+  }
+
+  
+
   public function countFollowing(string $id_user) :array
   {
     $sql = "SELECT COUNT(id_following) as nbrFollowing FROM follow INNER JOIN user ON follow.ID_user = user.ID_user WHERE user.ID_user = :id_user";

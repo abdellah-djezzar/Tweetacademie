@@ -9,6 +9,8 @@
       </p>
       <p class="d-inline-block mb-0">
         <?= "@" . $member->getPseudo() ."" ?>
+        <?php $member->setPseudo("ok")?>
+        <?= $member->getPseudo()?>
       </p>
     </div>
   </div>

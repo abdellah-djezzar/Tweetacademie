@@ -16,7 +16,10 @@ $UserDataRepository = new UserDataRepository;
 $TweetsRepository = new TweetsRepository;
 // get all information from user by ID
 $profilMember = $UserDataRepository->getUserById($_GET['id_user']);
+
+echo $profilMember["lastname"];
 $member = new Member($profilMember);
+
 
 $countTweet = $TweetsRepository->countTweet($_GET['id_user']);
 

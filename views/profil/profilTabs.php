@@ -17,7 +17,7 @@
         
       </ul>
       <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="tweet" role="tabpanel" aria-labelledby="tweet-tab">Lister tweets</div>
+        <div class="tab-pane fade show active" id="tweet" role="tabpanel" aria-labelledby="tweet-tab"><?php include('views/profil/tweets.php') ?></div>
         <div class="tab-pane fade" id="followers" role="tabpanel" aria-labelledby="followers-tab">Lister Followers</div>
         <div class="tab-pane fade" id="following" role="tabpanel" aria-labelledby="following-tab"><?php include('views/profil/followingList.php')?></div>
       </div>

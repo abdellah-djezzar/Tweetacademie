@@ -9,6 +9,10 @@ class Member
   private $dob;
   private string $email;
   private string $password;
+  private  $bio;
+  private string $city;
+  private string $link;
+  private string $deleted;
 
   public function __construct($donnees)
   {
@@ -20,17 +24,6 @@ class Member
       }
   }
   }
-
-  // public function hydrate(array $donnees)
-  // {
-  //   foreach ($donnees as $key => $value) {
-  //     $method = 'set' . ucfirst($key);
-
-  //     if (method_exists($this, $method)) {
-  //         $this->$method($value);
-  //     }
-  // }
-  // }
 
   public function getLastname() : string
   {
@@ -112,6 +105,54 @@ class Member
   public function setPassword(string $password) : self 
   {
     $this->password = $password;
+
+    return $this;
+  }
+
+  public function getBio()
+  {
+    return $this->bio;
+  }
+
+  public function setBio($bio)
+  {
+    $this->bio = $bio;
+
+    return $this;
+  }
+
+  public function getCity()
+  {
+    return $this->city;
+  }
+
+  public function setCity($city)
+  {
+    $this->city = $city;
+
+    return $this;
+  }
+
+  public function getLink()
+  {
+    return $this->link;
+  }
+
+  public function setLink($link)
+  {
+    $this->link = $link;
+
+    return $this;
+  }
+
+  public function getDeleted()
+  {
+    return $this->deleted;
+  }
+
+  public function setDeleted($deleted)
+  {
+    $this->deleted = $deleted;
 
     return $this;
   }

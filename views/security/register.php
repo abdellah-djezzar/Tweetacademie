@@ -35,6 +35,22 @@
          </div>
 
          <div class="form-group">
+         <input class="w-100" type="hidden" id="bio" name="bio" value="Aucune bio">
+         </div>
+
+         <div class="form-group">
+         <input class="w-100" type="hidden" id="city" name="city" value="Non communiqué">
+         </div>
+
+         <div class="form-group">
+         <input class="w-100" type="hidden" id="link" name="link" value="Aucun Lien">
+         </div>
+
+         <div class="form-group">
+         <input class="w-100" type="hidden" id="deleted" name="deleted" value="0">
+         </div>
+
+         <div class="form-group">
          <input type="hidden" name="register" />
          <input type="submit" id="test">
          <span id="error"></span>
