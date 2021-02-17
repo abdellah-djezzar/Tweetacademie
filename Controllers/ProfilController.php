@@ -3,12 +3,6 @@ if(empty($_SESSION['id'])){
   header('Location: index.php?action=');
 } 
 
-function debug(...$var){
-  echo "<pre>";
-  var_dump($var);
-  echo "</pre>";
-}
-
 require ('Model/member.php');
 require ('Repository/UserDataRepository.php');
 require ('Repository/TweetsRepository.php');
@@ -23,19 +17,22 @@ $member = new Member($newMember);
 // countTweet
 $userId = $newMember["ID_user"];
 $countTweet = $TweetRepository->countTweet($userId);
+echo "<br>";
+echo "<br>";
 
-// getFollowing
-$getFollowing = $TweetRepository->getFollowing($_SESSION['id']);
+if(!empty($_GET["id_user"])) {
+  $newMember = $UserDataRepository->getUserById($_GET["id_user"]);
+  $member = new Member($newMember);
+  $getFollowing = $TweetRepository->getFollowing($_GET['id_user']);
+  $getFollowers = $TweetRepository->getFollowers((int)$_GET['id_user']);
+  $CountFollowing = $TweetRepository->countFollowing($_GET['id_user']);
+  $getAllFromFollowings = $TweetRepository->getAllFromFollowing($_GET['id_user']);
 
-// followAMember 
-
-//$followAMember = $TweetRepository->followAMember()
-// Count Following
-$CountFollowing = $TweetRepository->countFollowing($_SESSION['id']);
-
-// Get All informations from Followings
-$getAllFromFollowings = $TweetRepository->getAllFromFollowing($_SESSION['id']);
-// créer un model à partir de ces informations
+}
+  $getFollowing = $TweetRepository->getFollowing($_SESSION['id']);
+  $getFollowers = $TweetRepository->getFollowers((int)$_SESSION['id']);
+  $CountFollowing = $TweetRepository->countFollowing($_SESSION['id']);
+  $getAllFromFollowings = $TweetRepository->getAllFromFollowing($_SESSION['id']);
 
 
 include('views/profil/profil.php');

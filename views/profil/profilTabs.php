@@ -14,13 +14,28 @@
         <li class="nav-item" role="presentation">
           <a class="nav-link" id="following-tab" data-toggle="tab" href="#following" role="tab" aria-controls="following" aria-selected="false">Following (<?= $CountFollowing["nbrFollowing"] ?>)</a>
         </li>
+
+        <?php
+        if(isset($_GET['id_user'])){?>
+
+          <li class="nav-item">
+          <form action="" method="POST" id="subscribe">
+            <input type="submit" name="subscribe" id="subBtn" value="s'abonner">
+            <input type="hidden" value="<?=$_GET["id_user"]?>" name="user">
+          </form>
+          </li>
+          <?php }
+        ?>
+
         
       </ul>
       <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="tweet" role="tabpanel" aria-labelledby="tweet-tab"><?php include('views/profil/tweets.php') ?></div>
-        <div class="tab-pane fade" id="followers" role="tabpanel" aria-labelledby="followers-tab">Lister Followers</div>
+
+        <div class="tab-pane fade" id="followers" role="tabpanel" aria-labelledby="followers-tab"><?php include('views/profil/followersList.php')?></div>
+
         <div class="tab-pane fade" id="following" role="tabpanel" aria-labelledby="following-tab"><?php include('views/profil/followingList.php')?></div>
-      </div>
+        </div>
     </div>
   </div>
 </div>
