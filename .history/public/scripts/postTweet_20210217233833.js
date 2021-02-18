@@ -5,7 +5,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
       .then((response) => {
         document.getElementById("wrap").innerHTML = response;
 
+        retweet();
+
         const cbox = document.querySelectorAll(".retweet");
+        console.log(cbox);
         for (let i = 0; i < cbox.length; i++) {
           cbox[i].addEventListener("click", retweet);
         }
@@ -43,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     })
       .then((response) => response.text())
       .then((response) => {
-        document.getElementById("wrap").innerHTML = "ok";
+        document.getElementById("wrap").innerHTML = response;
       })
       .catch((error) => console.log(error));
   }

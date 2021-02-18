@@ -100,12 +100,12 @@ class TweetsRepository extends Db {
 
   public function postRetweet($id_user, $id_tweet)
   {
-    $sql = "INSERT INTO retweet (ID_user, ID_tweet) VALUES (:id_user, :id_tweet)";
+    $sql = "INSERT INTO retweet (ID_user, ID_tweet) VALUES (:id_user, :id_tweet) WHERE ID_user = :id_user";
     $query = $this->connect()->prepare($sql);
     $query->execute([
       "id_user" => $id_user,
       "id_tweet"=> $id_tweet
-    ]);
+    ])
   }
 
   // montrer les personnes que je suis  (que je follow)

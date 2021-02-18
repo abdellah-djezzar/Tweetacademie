@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       .then((response) => response.text())
       .then((response) => {
         document.getElementById("wrap").innerHTML = response;
+        document.getElementById("wreap").innerHTML = retweet();
 
         const cbox = document.querySelectorAll(".retweet");
         for (let i = 0; i < cbox.length; i++) {
@@ -42,9 +43,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       body: (data = new FormData(form)),
     })
       .then((response) => response.text())
-      .then((response) => {
-        document.getElementById("wrap").innerHTML = "ok";
-      })
+      .then((response) => {})
       .catch((error) => console.log(error));
   }
 });

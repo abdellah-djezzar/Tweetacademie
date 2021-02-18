@@ -98,16 +98,6 @@ class TweetsRepository extends Db {
     return $query->fetch();
   }
 
-  public function postRetweet($id_user, $id_tweet)
-  {
-    $sql = "INSERT INTO retweet (ID_user, ID_tweet) VALUES (:id_user, :id_tweet)";
-    $query = $this->connect()->prepare($sql);
-    $query->execute([
-      "id_user" => $id_user,
-      "id_tweet"=> $id_tweet
-    ]);
-  }
-
   // montrer les personnes que je suis  (que je follow)
   //SELECT pseudo from user INNER JOIN follow ON follow.ID_user = user.ID_user WHERE follow.ID_user = 2
 

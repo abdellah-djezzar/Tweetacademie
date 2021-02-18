@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       .then((response) => response.text())
       .then((response) => {
         document.getElementById("wrap").innerHTML = response;
+        retweet();
 
         const cbox = document.querySelectorAll(".retweet");
         for (let i = 0; i < cbox.length; i++) {
@@ -34,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   //setInterval(loadTweet, 5000);
 
   function retweet(e) {
+    console.log("ok");
     e.preventDefault();
     form = document.querySelector(".retweet");
     console.log(form);

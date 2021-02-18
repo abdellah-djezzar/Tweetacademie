@@ -33,8 +33,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   });
   //setInterval(loadTweet, 5000);
 
-  function retweet(e) {
-    e.preventDefault();
+  function retweet() {
     form = document.querySelector(".retweet");
     console.log(form);
     fetch("index.php?action=retweet", {
@@ -43,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     })
       .then((response) => response.text())
       .then((response) => {
-        document.getElementById("wrap").innerHTML = "ok";
+        document.getElementById("wrap").innerHTML = this.value;
       })
       .catch((error) => console.log(error));
   }

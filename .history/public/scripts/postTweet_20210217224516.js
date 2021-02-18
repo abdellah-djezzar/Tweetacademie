@@ -1,13 +1,22 @@
 document.addEventListener("DOMContentLoaded", function (event) {
+  document.getElementById("retweet").addEventListener("click", (e) => {
+    console.log("ok");
+  });
+
   const loadTweet = () => {
     fetch("index.php?action=gettweets")
       .then((response) => response.text())
       .then((response) => {
         document.getElementById("wrap").innerHTML = response;
 
+        function toto() {
+          alert("ok");
+        }
+
         const cbox = document.querySelectorAll(".retweet");
+        console.log(cbox);
         for (let i = 0; i < cbox.length; i++) {
-          cbox[i].addEventListener("click", retweet);
+          cbox[i].addEventListener("click", toto);
         }
       })
       .catch((error) => console.log(error));
@@ -32,19 +41,4 @@ document.addEventListener("DOMContentLoaded", function (event) {
       .catch((error) => console.log(error));
   });
   //setInterval(loadTweet, 5000);
-
-  function retweet(e) {
-    e.preventDefault();
-    form = document.querySelector(".retweet");
-    console.log(form);
-    fetch("index.php?action=retweet", {
-      method: "POST",
-      body: (data = new FormData(form)),
-    })
-      .then((response) => response.text())
-      .then((response) => {
-        document.getElementById("wrap").innerHTML = "ok";
-      })
-      .catch((error) => console.log(error));
-  }
 });

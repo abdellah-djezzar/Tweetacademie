@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     })
       .then((response) => response.text())
       .then((response) => {
-        document.getElementById("wrap").innerHTML = "ok";
+        this.value;
       })
       .catch((error) => console.log(error));
   }

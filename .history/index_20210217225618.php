@@ -13,8 +13,8 @@ session_start();
     require('Controllers/SubscribeController.php');
     exit;
 } elseif(!empty($_GET['action']) && ($_GET['action'] == "retweet")){
-    require('Controllers/RetweetController.php');
-    exit;
+  require('Controllers/RetweetController.php');
+  exit;
 }
 
 require('../twitter/views/header.php');

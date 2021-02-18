@@ -25,7 +25,7 @@ class TweetsRepository extends Db {
 
   public function showTweets() : array
   {
-    $sql = "SELECT * FROM tweet INNER JOIN user ON tweet.ID_user = user.ID_user ORDER BY ID_tweet DESC LIMIT 20";
+    $sql = "SELECT * FROM tweet INNER JOIN user ON tweet.ID_user = user.ID_user ORDER BY ID_tweet INNER JOIN reweet WHERE tweet.ID_tweet = retweet.ID_tweet DESC LIMIT 20";
     $query = $this->connect()->prepare($sql);
     $query->execute();
     return $query->fetchAll();

@@ -12,9 +12,6 @@ session_start();
 } elseif(!empty($_GET['action']) && ($_GET['action'] == "subscribe")){
     require('Controllers/SubscribeController.php');
     exit;
-} elseif(!empty($_GET['action']) && ($_GET['action'] == "retweet")){
-    require('Controllers/RetweetController.php');
-    exit;
 }
 
 require('../twitter/views/header.php');

@@ -1,5 +1,7 @@
 <div class="card-columns">
 <?php 
+var_dump($getFollowers);
+
 foreach($getFollowers as $key => $followers){ ?>
 
   <div class="card bg-light">

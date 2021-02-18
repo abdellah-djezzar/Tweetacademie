@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   //setInterval(loadTweet, 5000);
 
   function retweet(e) {
+    console.log("ok");
     e.preventDefault();
     form = document.querySelector(".retweet");
     console.log(form);
