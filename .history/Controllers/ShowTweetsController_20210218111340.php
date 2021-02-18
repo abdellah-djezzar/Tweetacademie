@@ -2,8 +2,5 @@
 require ('Repository/TweetsRepository.php');
 $TweetsRepository = new TweetsRepository;
 $tweets = $TweetsRepository->showTweets();
-
-$retweet = $TweetsRepository->postRetweet(1, 35);
-
+$retweets = $TweetsRepository->showRetweet();
 include('views/home/showTweets.php');
-
