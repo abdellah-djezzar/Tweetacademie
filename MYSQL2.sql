@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.5deb2
+-- version 4.9.7deb1
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : ven. 12 fév. 2021 à 19:24
--- Version du serveur :  10.3.25-MariaDB-0ubuntu0.20.04.1
--- Version de PHP : 7.4.3
+-- Généré le : jeu. 18 fév. 2021 à 10:58
+-- Version du serveur :  10.3.25-MariaDB-0ubuntu1
+-- Version de PHP : 8.0.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `MYTY`
+-- Base de données : `MYTW`
 --
 
 -- --------------------------------------------------------
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `aime` (
-  `ID_aime` int(11) NOT NULL,
+  `ID` int(11) NOT NULL,
   `ID_user` int(11) NOT NULL,
   `ID_tweet` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -41,7 +41,7 @@ CREATE TABLE `aime` (
 --
 
 CREATE TABLE `comment` (
-  `ID_comment` int(11) NOT NULL,
+  `ID` int(11) NOT NULL,
   `ID_user` int(11) NOT NULL,
   `text` varchar(255) NOT NULL,
   `ID_tweet` int(11) NOT NULL
@@ -54,7 +54,7 @@ CREATE TABLE `comment` (
 --
 
 CREATE TABLE `follow` (
-  `ID_follow` int(11) NOT NULL,
+  `ID` int(11) NOT NULL,
   `id_following` int(11) NOT NULL,
   `ID_user` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -66,7 +66,7 @@ CREATE TABLE `follow` (
 --
 
 CREATE TABLE `hashtag` (
-  `ID_hashtag` int(11) NOT NULL,
+  `ID` int(11) NOT NULL,
   `hashtag` varchar(255) NOT NULL,
   `ID_tweet` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -78,8 +78,8 @@ CREATE TABLE `hashtag` (
 --
 
 CREATE TABLE `identification` (
-  `ID_identification` int(11) NOT NULL,
-  `iD_user` int(11) NOT NULL,
+  `ID` int(11) NOT NULL,
+  `ID_user` int(11) NOT NULL,
   `ID_tweet` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -90,7 +90,7 @@ CREATE TABLE `identification` (
 --
 
 CREATE TABLE `message` (
-  `ID_message` int(11) NOT NULL,
+  `ID` int(11) NOT NULL,
   `adressee_id` int(11) NOT NULL,
   `text` varchar(255) NOT NULL,
   `ID_user` int(11) NOT NULL
@@ -103,7 +103,7 @@ CREATE TABLE `message` (
 --
 
 CREATE TABLE `picture` (
-  `ID_picture` int(11) NOT NULL,
+  `ID` int(11) NOT NULL,
   `path` varchar(255) NOT NULL,
   `ID_tweet` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -115,7 +115,7 @@ CREATE TABLE `picture` (
 --
 
 CREATE TABLE `retweet` (
-  `ID_retweet` int(11) NOT NULL,
+  `ID` int(11) NOT NULL,
   `ID_user` int(11) NOT NULL,
   `ID_tweet` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -127,7 +127,7 @@ CREATE TABLE `retweet` (
 --
 
 CREATE TABLE `tweet` (
-  `ID_tweet` int(11) NOT NULL,
+  `ID` int(11) NOT NULL,
   `ID_user` int(11) NOT NULL,
   `text` varchar(255) NOT NULL,
   `date` date NOT NULL
@@ -140,7 +140,7 @@ CREATE TABLE `tweet` (
 --
 
 CREATE TABLE `user` (
-  `ID_user` int(11) NOT NULL,
+  `ID` int(11) NOT NULL,
   `lastname` varchar(255) NOT NULL,
   `firstname` varchar(255) NOT NULL,
   `username` varchar(255) NOT NULL,
@@ -156,77 +156,84 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Index pour les tables déchargées
+-- Déchargement des données de la table `user`
 --
+
 
 --
 -- Index pour la table `aime`
 --
 ALTER TABLE `aime`
-  ADD PRIMARY KEY (`ID_aime`),
-  ADD KEY `aime_tweet_FK` (`ID_tweet`);
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `aime_tweet_FK` (`ID_tweet`),
+  ADD KEY `aime_user_FK` (`ID_user`);
 
 --
 -- Index pour la table `comment`
 --
 ALTER TABLE `comment`
-  ADD PRIMARY KEY (`ID_comment`),
-  ADD KEY `comment_tweet_FK` (`ID_tweet`);
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `comment_tweet_FK` (`ID_tweet`),
+  ADD KEY `comment_user_FK` (`ID_user`);
 
 --
 -- Index pour la table `follow`
 --
 ALTER TABLE `follow`
-  ADD PRIMARY KEY (`ID_follow`),
-  ADD KEY `follow_user_FK` (`ID_user`);
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `follow_user_FK` (`ID_user`),
+  ADD KEY `following_user_FK` (`id_following`);
 
 --
 -- Index pour la table `hashtag`
 --
 ALTER TABLE `hashtag`
-  ADD PRIMARY KEY (`ID_hashtag`),
+  ADD PRIMARY KEY (`ID`),
   ADD KEY `hashtag_tweet_FK` (`ID_tweet`);
 
 --
 -- Index pour la table `identification`
 --
 ALTER TABLE `identification`
-  ADD PRIMARY KEY (`ID_identification`),
-  ADD KEY `identification_tweet_FK` (`ID_tweet`);
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `identification_tweet_FK` (`ID_tweet`),
+  ADD KEY `identification_user_FK` (`ID_user`);
 
 --
 -- Index pour la table `message`
 --
 ALTER TABLE `message`
-  ADD PRIMARY KEY (`ID_message`),
-  ADD KEY `message_user_FK` (`ID_user`);
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `message_user_FK` (`ID_user`),
+  ADD KEY `message_adressee_user_FK` (`adressee_id`);
 
 --
 -- Index pour la table `picture`
 --
 ALTER TABLE `picture`
-  ADD PRIMARY KEY (`ID_picture`),
+  ADD PRIMARY KEY (`ID`),
   ADD KEY `picture_tweet_FK` (`ID_tweet`);
 
 --
 -- Index pour la table `retweet`
 --
 ALTER TABLE `retweet`
-  ADD PRIMARY KEY (`ID_retweet`),
-  ADD KEY `retweet_tweet_FK` (`ID_tweet`);
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `retweet_tweet_FK` (`ID_tweet`),
+  ADD KEY `retweet_user_FK` (`ID_user`);
 
 --
 -- Index pour la table `tweet`
 --
 ALTER TABLE `tweet`
-  ADD PRIMARY KEY (`ID_tweet`),
+  ADD PRIMARY KEY (`ID`),
   ADD KEY `ID_user_FK` (`ID_user`);
 
 --
 -- Index pour la table `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`ID_user`);
+  ADD PRIMARY KEY (`ID`);
 
 --
 -- AUTO_INCREMENT pour les tables déchargées
@@ -236,61 +243,61 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT pour la table `aime`
 --
 ALTER TABLE `aime`
-  MODIFY `ID_aime` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `comment`
 --
 ALTER TABLE `comment`
-  MODIFY `ID_comment` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `follow`
 --
 ALTER TABLE `follow`
-  MODIFY `ID_follow` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `hashtag`
 --
 ALTER TABLE `hashtag`
-  MODIFY `ID_hashtag` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `identification`
 --
 ALTER TABLE `identification`
-  MODIFY `ID_identification` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `message`
 --
 ALTER TABLE `message`
-  MODIFY `ID_message` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `picture`
 --
 ALTER TABLE `picture`
-  MODIFY `ID_picture` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `retweet`
 --
 ALTER TABLE `retweet`
-  MODIFY `ID_retweet` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `tweet`
 --
 ALTER TABLE `tweet`
-  MODIFY `ID_tweet` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `ID_user` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Contraintes pour les tables déchargées
@@ -300,55 +307,61 @@ ALTER TABLE `user`
 -- Contraintes pour la table `aime`
 --
 ALTER TABLE `aime`
-  ADD CONSTRAINT `aime_tweet_FK` FOREIGN KEY (`ID_tweet`) REFERENCES `tweet` (`ID_tweet`);
+  ADD CONSTRAINT `aime_tweet_FK` FOREIGN KEY (`ID_tweet`) REFERENCES `tweet` (`ID`),
+  ADD CONSTRAINT `aime_user_FK` FOREIGN KEY (`ID_user`) REFERENCES `user` (`ID`);
 
 --
 -- Contraintes pour la table `comment`
 --
 ALTER TABLE `comment`
-  ADD CONSTRAINT `comment_tweet_FK` FOREIGN KEY (`ID_tweet`) REFERENCES `tweet` (`ID_tweet`);
+  ADD CONSTRAINT `comment_tweet_FK` FOREIGN KEY (`ID_tweet`) REFERENCES `tweet` (`ID`),
+  ADD CONSTRAINT `comment_user_FK` FOREIGN KEY (`ID_user`) REFERENCES `user` (`ID`);
 
 --
 -- Contraintes pour la table `follow`
 --
 ALTER TABLE `follow`
-  ADD CONSTRAINT `follow_user_FK` FOREIGN KEY (`ID_user`) REFERENCES `user` (`ID_user`);
+  ADD CONSTRAINT `follow_user_FK` FOREIGN KEY (`ID_user`) REFERENCES `user` (`ID`),
+  ADD CONSTRAINT `following_user_FK` FOREIGN KEY (`id_following`) REFERENCES `user` (`ID`);
 
 --
 -- Contraintes pour la table `hashtag`
 --
 ALTER TABLE `hashtag`
-  ADD CONSTRAINT `hashtag_tweet_FK` FOREIGN KEY (`ID_tweet`) REFERENCES `tweet` (`ID_tweet`);
+  ADD CONSTRAINT `hashtag_tweet_FK` FOREIGN KEY (`ID_tweet`) REFERENCES `tweet` (`ID`);
 
 --
 -- Contraintes pour la table `identification`
 --
 ALTER TABLE `identification`
-  ADD CONSTRAINT `identification_tweet_FK` FOREIGN KEY (`ID_tweet`) REFERENCES `tweet` (`ID_tweet`);
+  ADD CONSTRAINT `identification_tweet_FK` FOREIGN KEY (`ID_tweet`) REFERENCES `tweet` (`ID`),
+  ADD CONSTRAINT `identification_user_FK` FOREIGN KEY (`ID_user`) REFERENCES `user` (`ID`);
 
 --
 -- Contraintes pour la table `message`
 --
 ALTER TABLE `message`
-  ADD CONSTRAINT `message_user_FK` FOREIGN KEY (`ID_user`) REFERENCES `user` (`ID_user`);
+  ADD CONSTRAINT `message_adressee-user_FK` FOREIGN KEY (`adressee_id`) REFERENCES `user` (`ID`),
+  ADD CONSTRAINT `message_user_FK` FOREIGN KEY (`ID_user`) REFERENCES `user` (`ID`);
 
 --
 -- Contraintes pour la table `picture`
 --
 ALTER TABLE `picture`
-  ADD CONSTRAINT `picture_tweet_FK` FOREIGN KEY (`ID_tweet`) REFERENCES `tweet` (`ID_tweet`);
+  ADD CONSTRAINT `picture_tweet_FK` FOREIGN KEY (`ID_tweet`) REFERENCES `tweet` (`ID`);
 
 --
 -- Contraintes pour la table `retweet`
 --
 ALTER TABLE `retweet`
-  ADD CONSTRAINT `retweet_tweet_FK` FOREIGN KEY (`ID_tweet`) REFERENCES `tweet` (`ID_tweet`);
+  ADD CONSTRAINT `retweet_tweet_FK` FOREIGN KEY (`ID_tweet`) REFERENCES `tweet` (`ID`),
+  ADD CONSTRAINT `retweet_user_FK` FOREIGN KEY (`ID_user`) REFERENCES `user` (`ID`);
 
 --
 -- Contraintes pour la table `tweet`
 --
 ALTER TABLE `tweet`
-  ADD CONSTRAINT `ID_user_FK` FOREIGN KEY (`ID_user`) REFERENCES `user` (`ID_user`);
+  ADD CONSTRAINT `ID_user_FK` FOREIGN KEY (`ID_user`) REFERENCES `user` (`ID`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
