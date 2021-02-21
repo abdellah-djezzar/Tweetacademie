@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
       .then((response) => response.text())
       .then((response) => {
         document.getElementById("wrap").innerHTML = response;
-        loadReTweet();
         const cbox = document.querySelectorAll(".retweet");
         for (let i = 0; i < cbox.length; i++) {
           cbox[i].addEventListener("click", retweet);

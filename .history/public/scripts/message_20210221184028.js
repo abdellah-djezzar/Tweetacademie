@@ -9,10 +9,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
         "Content-Type": "application/json; charset=utf-8",
       },
     })
-      .then((res) => res.text()) // la réponse
+      .then((res) => res.json()) // la réponse
       .then((data) => {
         document.getElementById("myData").innerHTML = data;
-        console.log(data);
       })
 
       .catch((err) => {

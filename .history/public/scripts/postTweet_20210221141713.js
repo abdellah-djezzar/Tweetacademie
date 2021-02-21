@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
       .then((response) => response.text())
       .then((response) => {
         document.getElementById("wrap").innerHTML = response;
-        loadReTweet();
         const cbox = document.querySelectorAll(".retweet");
         for (let i = 0; i < cbox.length; i++) {
           cbox[i].addEventListener("click", retweet);
@@ -25,7 +24,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
       })
       .catch((error) => console.log(error));
   };
-
+  loadTweet();
+  loadReTweet();
   loadTweet();
 
   document.querySelector("#regForm").addEventListener("submit", (e) => {
@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   function retweet(e) {
     e.preventDefault();
 
+    console.log(e.target.value);
     let form = document.querySelector(".retweet").value;
     fetch("index.php?action=saveRetweet&id_retweet=" + e.target.value, {
       method: "POST",

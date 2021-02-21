@@ -18,8 +18,8 @@ session_start();
 } elseif(!empty($_GET['action']) && ($_GET['action'] == "saveRetweet")){
   require('Controllers/SaveRetweetController.php');
     exit;
-} elseif(!empty($_GET['action']) && ($_GET['action'] == "getRetweets")){
-  require('Controllers/ShowTweetsController.php');
+} elseif(!empty($_GET['action']) && ($_GET['action'] == "getRetweet")){
+  require('Controllers/ShowRetweetsController.php');
   exit;
 } elseif(!empty($_GET['action']) && ($_GET['action'] == "saveMessage")){
   require('Controllers/SaveMessageController.php');

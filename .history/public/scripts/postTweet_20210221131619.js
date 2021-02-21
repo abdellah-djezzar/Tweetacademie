@@ -4,20 +4,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
       .then((response) => response.text())
       .then((response) => {
         document.getElementById("wrap").innerHTML = response;
-        loadReTweet();
-        const cbox = document.querySelectorAll(".retweet");
-        for (let i = 0; i < cbox.length; i++) {
-          cbox[i].addEventListener("click", retweet);
-        }
-      })
-      .catch((error) => console.log(error));
-  };
-
-  const loadReTweet = () => {
-    fetch("index.php?action=getRetweets")
-      .then((response) => response.text())
-      .then((response) => {
-        document.getElementById("wrap").innerHTML = response;
         const cbox = document.querySelectorAll(".retweet");
         for (let i = 0; i < cbox.length; i++) {
           cbox[i].addEventListener("click", retweet);
@@ -48,16 +34,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
   function retweet(e) {
     e.preventDefault();
 
+    console.log(e.target.value);
     let form = document.querySelector(".retweet").value;
     fetch("index.php?action=saveRetweet&id_retweet=" + e.target.value, {
       method: "POST",
       body: (data = new FormData(form)),
     })
       .then((response) => response.text())
-      .then((response) => {
-        document.getElementById("wrap").innerHTML = response;
-        loadReTweet();
-      })
+      .then((response) => {})
       .catch((error) => console.log(error));
   }
 });

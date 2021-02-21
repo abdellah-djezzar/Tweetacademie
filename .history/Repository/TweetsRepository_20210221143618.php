@@ -125,18 +125,7 @@ class TweetsRepository extends Db {
     return $query->fetch();
   }
 
-  public function countFollowers(int $id_user)
-  {
-    $sql = "SELECT COUNT(id_following) as nbrFollowers FROM follow INNER JOIN user ON follow.ID_user = user.ID WHERE id_following = :id_user";
-    
-    $query = $this->connect()->prepare($sql);
-    $query->execute([
-      "id_user" => $id_user
-    ]);
-    return $query->fetch();
-  }
-
-  public function postRetweet(int $id_user, int $id_tweet)
+  public function postRetweet($id_user, $id_tweet)
   {
     $sql = "INSERT INTO retweet (ID_user, ID_tweet) VALUES (:id_user, :id_tweet)";
     $query = $this->connect()->prepare($sql);

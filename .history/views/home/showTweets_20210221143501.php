@@ -19,7 +19,7 @@ foreach($retweets as $retweet){ ?>
 <?php 
 foreach($tweets as $tweet){ ?>
 
-  <div class="tweet-container" style="display: flex; flex-direction: column">
+  <div class="tweet-container style="display: flex; flex-direction: column"">
   <p value="<?=$tweet["text"]?>"><?= $tweet["text"]?></p>
   <span>Tweet posted by: <a href="<?="index.php?action=profil&id_user=". $tweet["ID"] .""?>"><?=$tweet["pseudo"]?></a></span>
         <form style="display: inline" action="" method="POST" class="retweet">

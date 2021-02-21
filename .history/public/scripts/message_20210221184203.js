@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     })
       .then((res) => res.text()) // la réponse
       .then((data) => {
-        document.getElementById("myData").innerHTML = data;
+        document.getElementById("myData").innerHTML = JSON.stringify(data);
         console.log(data);
       })
 

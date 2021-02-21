@@ -19,7 +19,7 @@ session_start();
   require('Controllers/SaveRetweetController.php');
     exit;
 } elseif(!empty($_GET['action']) && ($_GET['action'] == "getRetweets")){
-  require('Controllers/ShowTweetsController.php');
+  require('Controllers/ShowRetweetsController.php');
   exit;
 } elseif(!empty($_GET['action']) && ($_GET['action'] == "saveMessage")){
   require('Controllers/SaveMessageController.php');

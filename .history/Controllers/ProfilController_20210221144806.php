@@ -30,7 +30,6 @@ if(!empty($_GET["id_user"])) {
   $getFollowers = $TweetRepository->getFollowers((int)$_GET['id_user']);
   $CountFollowing = $TweetRepository->countFollowing($_GET['id_user']);
   $CountFollowers = $TweetRepository->countFollowers((int)$_GET['id_user']);
-  var_dump($CountFollowers);
   $getAllFromFollowings = $TweetRepository->getAllFromFollowing($_GET['id_user']);
 
 

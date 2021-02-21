@@ -127,7 +127,7 @@ class TweetsRepository extends Db {
 
   public function countFollowers(int $id_user)
   {
-    $sql = "SELECT COUNT(id_following) as nbrFollowers FROM follow INNER JOIN user ON follow.ID_user = user.ID WHERE id_following = :id_user";
+    $sql = "SELECT COUNT(id_following) as nbrFollowing FROM follow INNER JOIN user ON follow.ID_user = user.ID WHERE id_following = :id_user";
     
     $query = $this->connect()->prepare($sql);
     $query->execute([

@@ -8,7 +8,7 @@
         </li>
 
         <li class="nav-item" role="presentation">
-          <a class="nav-link" id="followers-tab" data-toggle="tab" href="#followers" role="tab" aria-controls="followers" aria-selected="false">Followers (<?= $CountFollowers["nbrFollowers"] ?>)</a>
+          <a class="nav-link" id="followers-tab" data-toggle="tab" href="#followers" role="tab" aria-controls="followers" aria-selected="false">(<?= $CountFollowers["nbrFollowers"] ?>)Followers</a>
         </li>
 
         <li class="nav-item" role="presentation">
