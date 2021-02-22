@@ -12,7 +12,7 @@
       <a  class="nav-link" href="index.php?action=profil">Mon profil</a>
       </li>
       <li class="nav-item">
-      <a  class="nav-link" href="index.php?action=searchBar">Chercher un membre</a>
+      <a  class="nav-link" href="index.php?action=HomeMessagerie">Chercher un membre</a>
       </li>
       <li class="nav-item">
       <a class="nav-link" href="index.php?action=logout">Se deconnecter</a>

@@ -46,7 +46,7 @@ if (empty($_GET['action'])) {
 } elseif($_GET['action'] == "profil"){
   require('Controllers/ProfilController.php');
 } elseif($_GET['action'] == "searchBar"){
-  require('Controllers/SearchBarController.php');
+  require('Controllers/searchBarController.php');
 }
 
 require('../twitter/views/footer.php');

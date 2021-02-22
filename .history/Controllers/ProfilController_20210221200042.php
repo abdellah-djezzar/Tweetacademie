@@ -40,7 +40,7 @@ if(!empty($_GET["id_user"])) {
   $getFollowing = $TweetRepository->getFollowing($_SESSION['id']);
   $getFollowers = $TweetRepository->getFollowers((int)$_SESSION['id']);
   $CountFollowing = $TweetRepository->countFollowing($_SESSION['id']);
-  $CountFollowers = $TweetRepository->countFollowers($_SESSION['id']);
+  $CountFollowers = $TweetRepository->countFollowers((int)$_SESSION['id']);
   $getAllFromFollowings = $TweetRepository->getAllFromFollowing($_SESSION['id']);
 }
 
