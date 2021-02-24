@@ -1,6 +1,6 @@
 <div class="container-fluid p-5 bg-bluue">
    <div class="row d-flex flex-wrap justify-content-between">
-      <div class="col-12 col-md-6 d-flex justify-content-center mb-5">
+      <div class="col-12 col-md-6 d-flex justify-content-center">
          <img src="public/asset/twitterHom.png" class="img-fluid" alt="Responsive image">
       </div>
 
@@ -8,7 +8,7 @@
 
       <form action="" method="POST" class="justify-content-center">
    
-      <h1 class="display-4 text-white-50 mb-5">Bienvenue sur Twitter ! Inscris-toi !</h1>
+      <h1 class="display-4 text-white-50 mb-4">Bienvenue sur Twitter ! Inscris-toi !</h1>
 
           <div class="mb-3">
             <input type="text" id="name" name="name" class="form-control" placeholder="Nom">
