@@ -1,0 +1,18 @@
+document.addEventListener("DOMContentLoaded", function (event) {
+  document.querySelector("#postFormMessage").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const inputMessage = document.getElementById("postMessages").value;
+    let form = document.querySelector("#postFormMessage");
+
+    fetch("index.php?action=postMessage", {
+      method: "POST",
+      body: (data = new FormData(form)),
+    })
+      .then((response) => response.text())
+      .then((response) => {
+        let toto = (document.getElementById("getMessage").innerHTML = response);
+        console.log(toto);
+      })
+      .catch((error) => console.log(error));
+  });
+});

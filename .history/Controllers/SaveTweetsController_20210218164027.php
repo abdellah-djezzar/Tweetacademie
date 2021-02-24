@@ -1,0 +1,9 @@
+<?php 
+require ('Repository/TweetsRepository.php');
+$TweetRepository = new TweetsRepository();
+
+if(!empty($_POST["postTweet"])){
+  $postTweet = $TweetRepository->postTweet($_SESSION["id"], $_POST["postTweet"]);
+}
+
+var_dump($_POST["postTweet"]);
