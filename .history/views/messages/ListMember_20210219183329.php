@@ -1,1 +1,0 @@
-<p>Liste des membres</p>
