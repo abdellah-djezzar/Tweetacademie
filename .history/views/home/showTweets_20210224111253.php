@@ -11,7 +11,7 @@ foreach($retweets as $retweet){ ?>
   </form>
 
   <form action="" method="POST" class="likeForm">
-  <button type="submit" class="likeValue far fa-heart" name="id_tweet" value="<?= $tweet[0]?>"></button>
+  <button type="submit" class="likeValue far fa-heart"><?= $tweet[0]?></button>
   </form>
 
 

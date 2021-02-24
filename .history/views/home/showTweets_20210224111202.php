@@ -11,7 +11,7 @@ foreach($retweets as $retweet){ ?>
   </form>
 
   <form action="" method="POST" class="likeForm">
-  <button type="submit" class="likeValue far fa-heart" name="id_tweet" value="<?= $tweet[0]?>"></button>
+  <button type="submit" class="likeValue far fa-heart"></i>" name="id_tweet" value="<?= $tweet[0]?>">Like</button>
   </form>
 
 
@@ -31,7 +31,7 @@ foreach($tweets as $tweet){ ?>
         <button type="submit" class="retweetValue" value="<?= $tweet[0]?>" name="id_tweet">retweet</button>
         </form>
         <form action="" method="POST" class="likeForm">
-            <button type="submit" class="likeValue far fa-heart" name="id_tweet" value="<?= $tweet[0]?>"></button>
+            <button type="submit" class="likeValue far fa-heart" name="id_tweet" value="<?= $tweet[0]?>">Like</button>
       </form>
         </div>
 <?php 
