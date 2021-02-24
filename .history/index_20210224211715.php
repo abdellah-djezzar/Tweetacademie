@@ -33,9 +33,8 @@ session_start();
 } elseif(!empty($_GET['action']) && ($_GET['action'] == "LikeController")){
   require('Controllers/LikeController.php');
   exit;
-} elseif(!empty($_GET['action']) && ($_GET['action']) == "editProfil"){
+} elseif(!empty($_GET['action']) && ($_GET['action']) == "editProfilController"){
   require('Controllers/editProfilController.php');
-  exit;
 }
 
 require('../twitter/views/header.php');

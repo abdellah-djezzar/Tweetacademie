@@ -24,8 +24,9 @@
   --info: #17a2b8;
   --warning: #ffc107;
   --danger: #dc3545;
-  --light: #f8f9fa;
+  --light: #97adc4;
   --dark: #343a40;
+  --bluue: #1DA1F2;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -6824,6 +6825,14 @@ a.bg-dark:hover, a.bg-dark:focus,
 button.bg-dark:hover,
 button.bg-dark:focus {
   background-color: #1d2124 !important;
+}
+.bg-bluue {
+  background-color: #1DA1F2 !important;
+}
+a.bg-bluue:hover, a.bg-bluue:focus,
+button.bg-bluue:hover,
+button.bg-bluue:focus {
+  background-color: #1DA1F2 !important;
 }
 
 .bg-white {

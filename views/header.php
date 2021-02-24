@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
   <link rel="stylesheet" href="public/style/bootstrap-4.6.0-dist/css/bootstrap.min.css">
   <?php include('views/theme.php') ?>
-  <title>Tweeter Inscriptio Connexion</title>
+  <title>Tweet Académie</title>
   <title>Header.php</title>
 </head>
 <body>
