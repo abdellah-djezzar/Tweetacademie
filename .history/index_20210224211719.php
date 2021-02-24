@@ -35,7 +35,6 @@ session_start();
   exit;
 } elseif(!empty($_GET['action']) && ($_GET['action']) == "editProfil"){
   require('Controllers/editProfilController.php');
-  exit;
 }
 
 require('../twitter/views/header.php');

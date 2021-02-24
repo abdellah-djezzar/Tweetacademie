@@ -1,4 +1,4 @@
-<form action="" method="POST" id="formEditProfil" class="w-100 d-flex flex-column justify-content-center mt-5">
+<form action="index.php?action=profil#editprofil" method="POST" id="formEditProfil" class="w-100 d-flex flex-column justify-content-center mt-5">
   <div class="row">
     <div class="col-6">
          <div class="form-group">
