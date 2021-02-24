@@ -1,5 +1,4 @@
 <div class="container p-5">
-<!-- COMMENTAIRE --> 
    <div class="row d-flex flex-wrap justify-content-between">
       <div class="col-12 col-md-6 d-flex justify-content-center mb-5">
          <img src="public/asset/twitterHom.png" class="img-fluid" alt="Responsive image">
