@@ -21,7 +21,6 @@ $TweetRepository = new TweetsRepository;
 // hydratation
 $newMember = $UserDataRepository->getUserById($_SESSION["id"]);
 $member = new Member($newMember);
-var_dump($member);
 
 // countTweet
 $userId = $newMember["ID"];
@@ -49,17 +48,17 @@ if(!empty($_GET["id_user"])) {
 
 }
 
-  // if(isset($_POST["profil"])){
+  if(isset($_POST["profil"])){
 
-  //   $updateProfil = $UserDataRepository->updateProfil(
-  //     $_POST["username"],
-  //     $_POST["pseudo"],
-  //     $_POST["bio"],
-  //     $_POST["city"],
-  //     $_POST["link"],
-  //     $_SESSION['id'],
-  //   );
-  // }
+    $updateProfil = $UserDataRepository->updateProfil(
+      $_POST["username"],
+      $_POST["pseudo"],
+      $_POST["bio"],
+      $_POST["city"],
+      $_POST["link"],
+      $_SESSION['id'],
+    );
+  }
 
   if(!empty($_POST["delete"])){
     $UserDataRepository->disableAccount($_POST['delete']);

@@ -9,6 +9,7 @@
       </p>
       <p class="d-inline-block mb-0">
         <?= "@" . $member->getPseudo() ."" ?>
+        <?= $member->getPseudo()?>
       </p>
     </div>
   </div>
