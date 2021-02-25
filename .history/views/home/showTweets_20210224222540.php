@@ -19,6 +19,7 @@ foreach($retweets as $retweet){ ?>
 
 <?php 
 }
+var_dump($retweets);
 ?>
 <?php 
 foreach($tweets as $tweet){ ?>
