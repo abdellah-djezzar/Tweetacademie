@@ -3,7 +3,7 @@ foreach($retweets as $retweet){ ?>
 
   <div class="tweet-container" style="display: flex; flex-direction: column">
   <p value="<?=$retweet["text"]?>"><?= $retweet["text"]?></p>
-  <span>Retweet posted by: <a href="<?="index.php?action=profil&id_user=". $retweet['ID_user'] .""?>"><?=$retweet["pseudo"]?></a></span>
+  <span>Retweet posted by: <a href="<?="index.php?action=profil&id_user=". $getUser['ID'] .""?>"><?=$getUser["pseudo"]?></a></span>
 
   <form style="display: inline" action="" method="POST" class="retweet">
         <input type="hidden"  name="id_user">
@@ -19,6 +19,7 @@ foreach($retweets as $retweet){ ?>
 
 <?php 
 }
+var_dump($getUser);
 ?>
 <?php 
 foreach($tweets as $tweet){ ?>
