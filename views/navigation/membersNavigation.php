@@ -15,10 +15,10 @@
       <a  class="nav-link" href="index.php?action=searchBar">Chercher un membre</a>
       </li>
       <div class="switch-buttons">
-        <button class="switch-buttons__light button" data-stylesheet="public/style/light.css">Go Light</button>
-        <button class="switch-buttons__dark button" data-stylesheet="public/style/dark.css">Go Dark</button>
+      <button class="btn btn-outline-secondary switch-buttons__light button" data-stylesheet="public/style/light.css" type="button">Light mode</button>
+       <button class="btn btn-outline-secondary switch-buttons__dark button" data-stylesheet="public/style/dark.css" type="button">Dark mode</button>
       </div>
-      <button id="clear-storage">Clear Storage</button>
+      <button class="btn btn-outline-secondary" id="clear-storage" type="button">Clear Storage</button>
 
       <li class="nav-item">
       <a class="nav-link" href="index.php?action=logout">Se deconnecter</a>

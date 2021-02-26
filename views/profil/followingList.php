@@ -1,4 +1,4 @@
-<div class="card-columns">
+<div class="card-columns mt-3">
 
 <?php
 foreach($getFollowing as $key => $following){ ?>
