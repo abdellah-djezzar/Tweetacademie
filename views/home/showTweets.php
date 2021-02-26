@@ -1,20 +1,14 @@
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 <?php 
 
 foreach($retweets as $retweet){ ?>
 
   <div class="tweet-container" style="display: flex; flex-direction: column">
-  
-  <span>Tweet of <a href="<?="index.php?action=profil&id_user=". $retweet['ID_user'] .""?>"><?=$retweet["pseudo"]?></a> retweeted by ? :</span>
+ 
+  <span>Tweet of <a href="<?="index.php?action=profil&id_user=". $retweet['UserIDTweet'] .""?>"><?=$retweet["pseudo"]?></a> retweeted by ? </span>
+
   <p value="<?=$retweet["textTweet"]?>"><?= $retweet["textTweet"]?></p>
+
   <form style="display: inline" action="" method="POST" class="retweet">
         <input type="hidden"  name="id_user">
         <button type="submit" class="retweetValue" value="<?= $retweet["IDTweet"]?>" name="id_tweet">Retweet</button>
@@ -36,9 +30,9 @@ var_dump($retweet);
 foreach($tweets as $tweet){ ?>
 
   <div class="tweet-container" style="display: flex; flex-direction: column">
- 
-  <span><a href="<?="index.php?action=profil&id_user=". $tweet["ID"] .""?>"><?=$tweet["pseudo"]?></a> tweeted : </span>
   <p value="<?=$tweet["textTweet"]?>"><?= $tweet["textTweet"]?></p>
+  <span><a href="<?="index.php?action=profil&id_user=". $tweet["UserIDTweet"] .""?>"><?=$tweet["pseudo"]?></a> tweeted :</span>
+        <form style="display: inline" action="" method="POST" class="retweet">
         <input type="hidden" name="id_user">
         <button type="submit" class="retweetValue" value="<?= $tweet["IDTweet"]?>" name="id_tweet">Retweet</button>
         </form>

@@ -36,7 +36,7 @@
          <input class="form-control" type="text" id="username" name="username" placeholder="Username">
          </div>
 
-         <div class="mb-3">
+         <div class="mb-1">
          <input class="form-control" type="text" id="pseudo" name="pseudo" placeholder="Pseudo">
          </div>
 
@@ -56,11 +56,11 @@
          <input class="w-100" type="hidden" id="deleted" name="deleted" value="0">
          </div>
 
-         <div class="form-group">
-         <input type="hidden" name="register" />
-         <input type="submit" id="test">
-         <span id="error"></span>
+        <div class="mb-3">
+            <button type="submit" id="test" class="btn btn-light form-control">Envoyer</button>
+            <span id="error"></span>
          </div>
+         <input type="hidden" name="register">
       </form>
    </div>
 </div>
