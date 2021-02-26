@@ -1,0 +1,164 @@
+/* reset */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #414141;
+}
+
+/*  Home tweet */
+
+.row-home {
+  margin-top: 4em;
+}
+.bodyC {
+  background-color: #525252;
+}
+.add-tweet {
+  width: 90%;
+  height: 5em;
+  margin-top: 25px;
+  border-radius: 7px;
+  border: 2px solid rgba(103, 183, 233, 0.7);
+  background-color: #525252;
+  color: white;
+}
+
+/* tweet */
+.tweet-container {
+  padding: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border: thick double #9eb6c5;
+  background-color: rgba(102, 191, 243, 0.555);
+  border-radius: 6px;
+}
+.tweet-container:hover {
+  background-color: #4f738a;
+  transition: all 0.8s ease-out;
+}
+/* zone de texte tweet */
+.tweet-container p {
+  font-family: Tahoma;
+  font-size: 11pt;
+  color: #bcc7cf;
+  background-color: #2e3b422d;
+  width: 87%;
+  height: 89px;
+  margin-top: 2%;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: justify;
+}
+.tweet-container span {
+  color: rgba(255, 255, 255, 0.76);
+}
+/* nom de l'utilisateur qui a tweet */
+.tweet-container a {
+  color: rgb(15, 79, 139);
+  text-decoration: none;
+}
+/* boutton envoyer */
+.sendTweet {
+  margin-top: 42px;
+  margin-left: 3px;
+  padding: 3px;
+  width: 90px;
+  height: 39px;
+  border-radius: 15px;
+  border: 1px solid #4f8bb1;
+  font-family: tahoma;
+  color: #c9d5dd;
+  background: #6da1be;
+}
+.sendTweet:hover {
+  background-color: #69899c;
+  border: 0.5px solid #9ba2a5;
+  color: #b7c5ce;
+  transition: all 0.4s ease-out;
+}
+/* bouton retweet et like */
+.retweetValue {
+  width: 120px;
+  height: 40px;
+  border-radius: 7px;
+  color: #4c4f51;
+  font-size: 11pt;
+  font-family: Arial, Helvetica, sans-serif;
+  border: thick double #4f738a;
+  background: #5ea5d1;
+}
+.retweetValue:hover {
+  background-color: #4597cad0;
+  border: 0.5px solid #9ba2a5;
+  color: rgba(156, 208, 241, 0.979);
+  transition: all 0.5s ease-out;
+}
+.likeValue {
+  background: rgb(183, 218, 250);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: none;
+  float: right;
+  color: rgb(161, 136, 148);
+}
+.likeValue:hover {
+  transition: all 0.2s linear;
+  background-color: white;
+  color: rgb(116, 163, 207);
+}
+
+/* Profil Member */
+
+#margin-top-container-profil {
+  margin-top: 3rem;
+}
+.prof {
+  background: #4caae4be !important;
+}
+
+/* nav du compte */
+#myTab .nav-item {
+  background-color: rgb(85, 89, 99);
+}
+#myTab .nav-link {
+  color: #c3ccd3be;
+}
+/* .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  color: #495057;
+  background-color: #454950;
+  border-color: #dee2e6 #dee2e6 #fff;
+} */
+
+/* searchbar */
+
+#searchContainer {
+  margin-top: 5em;
+}
+.card-body {
+  background: #525252;
+  color: rgb(209, 221, 228);
+}
+
+/* NavBar */
+
+/* modifier le profil  */
+
+.form-control {
+  background-color: #575252c9;
+}
+form h4 {
+  color: #1da1f2;
+}
+#formEditProfil label {
+  color: rgba(255, 255, 255, 0.671);
+}
+#formEditProfil input {
+  color: rgba(255, 255, 255, 0.555);
+}

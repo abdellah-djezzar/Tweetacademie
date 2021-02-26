@@ -1,0 +1,133 @@
+/* reset */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #f1faff;
+  font-family: tahoma;
+}
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/*  Home tweet */
+
+.row-home {
+  margin-top: 4em;
+}
+.bodyC {
+  background-color: rgba(29, 161, 242, 0.4);
+}
+.add-tweet {
+  width: 90%;
+  height: 5em;
+  margin-top: 25px;
+  border-radius: 7px;
+  border: 2px solid rgba(29, 161, 242, 0.7);
+  background-color: #eff9ff;
+  color: #383b3d;
+}
+/* tweet */
+.tweet-container {
+  padding: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border: thick double #caebff;
+  border-radius: 6px;
+}
+.tweet-container:hover {
+  background-color: #caebff;
+  transition: all 0.8s ease-out;
+}
+.tweet-container p {
+  font-family: Tahoma;
+  font-size: 11pt;
+  color: #383b3d;
+  background-color: #2a89c42d;
+  width: 87%;
+  height: 89px;
+  margin-top: 2%;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: justify;
+}
+.tweet-container a {
+  color: rgb(55, 141, 223);
+  text-decoration: none;
+}
+.sendTweet {
+  margin-top: 42px;
+  margin-left: 3px;
+  padding: 3px;
+  width: 90px;
+  height: 39px;
+  border-radius: 15px;
+  border: 1px solid #caebff;
+  font-family: tahoma;
+  color: #4c4f51;
+  background: #7ec7f0;
+}
+.sendTweet:hover {
+  background-color: #caebff;
+  border: 0.5px solid #9ba2a5;
+  color: rgba(13, 70, 105, 0.7);
+  transition: all 0.4s ease-out;
+}
+/* bouton retweet et like */
+
+.retweetValue {
+  width: 120px;
+  height: 40px;
+  border-radius: 7px;
+  color: #4c4f51;
+  font-size: 11pt;
+  font-family: Arial, Helvetica, sans-serif;
+  border: thick double #caebff;
+  background: #4dbbffd0;
+}
+.retweetValue:hover {
+  background-color: #5cbefcd0;
+  border: 0.5px solid #9ba2a5;
+  color: rgba(13, 70, 105, 0.7);
+  transition: all 0.5s ease-out;
+}
+.likeValue {
+  background: rgb(126, 186, 241);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: none;
+  float: right;
+  color: white;
+}
+.likeValue:hover {
+  transition: all 0.2s linear;
+  background-color: white;
+  color: rgb(126, 186, 241);
+}
+@media screen and (max-width: 750px) {
+  .position-fixed {
+    position: inherit !important;
+  }
+}
+
+/* Profil Member */
+
+#margin-top-container-profil {
+  margin-top: 3rem;
+}
+
+/* searchbar */
+
+#searchContainer {
+  margin-top: 5em;
+}
+
+/* ici ce sont les couleurs par défaut */
