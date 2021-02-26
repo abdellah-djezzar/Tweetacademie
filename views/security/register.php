@@ -1,4 +1,4 @@
-<div class="container p-5">
+<div class="container-fluid p-5 bg-bluue">
 <!-- COMMENTAIRE --> 
    <div class="row d-flex flex-wrap justify-content-between">
       <div class="col-12 col-md-6 d-flex justify-content-center mb-5">
@@ -6,33 +6,38 @@
       </div>
       <div class="col-12 col-md-6 d-flex justify-content-center">
       <form action="" method="POST" class="w-100 d-flex flex-column justify-content-center">
-         <div class="form-group">
-         <input class="w-100" type="text" id="name" name="name" placeholder="Nom">
+      
+      <h1 class="display-4 text-white-50 mb-4">Bienvenue sur Twitter ! Inscris-toi !</h1>
+
+
+        <div class="mb-3">
+         <input  class="form-control" type="text" id="name" name="name" placeholder="Nom">
          </div>
 
-         <div class="form-group">
-         <input class="w-100" type="text" id="firstname" name="firstname" placeholder="Prenom">
+         <div class="mb-3">
+         <input class="form-control" type="text" id="firstname" name="firstname" placeholder="Prenom">
          </div>
 
-         <div class="form-group">
-         <input class="w-100" type="text" id="email" name="email" placeholder="Addresse e-mail" autocomplete="off">
+         <div class="input-group mb-3">
+         <span class="input-group-text" id="basic-addon1">@</span>
+         <input class="form-control" type="text" id="email" name="email" placeholder="Addresse e-mail" autocomplete="off" aria-describedby="basic-addon1">
          <span id="error"></span>
          </div>
 
-         <div class="form-group">
-         <input class="w-100" type="text" id="password" name="password" placeholder="Mot de passe">
+         <div class="mb-3">
+         <input class="form-control" type="text" id="password" name="password" placeholder="Mot de passe">
          </div>
 
-         <div class="form-group">
-         <input class="w-100" type="date" id="dob" name="dob">
+         <div class="mb-3">
+         <input class="form-control" type="date" id="dob" name="dob">
          </div>
 
-         <div class="form-group">
-         <input class="w-100" type="text" id="username" name="username" placeholder="Username">
+         <div class="mb-3">
+         <input class="form-control" type="text" id="username" name="username" placeholder="Username">
          </div>
 
-         <div class="form-group">
-         <input class="w-100" type="text" id="pseudo" name="pseudo" placeholder="Pseudo">
+         <div class="mb-3">
+         <input class="form-control" type="text" id="pseudo" name="pseudo" placeholder="Pseudo">
          </div>
 
          <div class="form-group">
