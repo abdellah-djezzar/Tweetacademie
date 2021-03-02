@@ -1,3 +1,14 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 <?php 
 if (empty($_SESSION['id']))
 {
@@ -6,5 +17,5 @@ if (empty($_SESSION['id']))
 require('Repository/TweetsRepository.php');
 $TweetsRepository = new TweetsRepository;
 
-$hashtags = $TweetsRepository->getTweetByHashTag($_GET["hashtag"]);
+$hashtag = $TweetsRepository->getTweetByHashTag($_GET["hashtag"]);
 include('views/home/hashtagHome.php');

@@ -7,4 +7,5 @@ require('Repository/TweetsRepository.php');
 $TweetsRepository = new TweetsRepository;
 
 $hashtags = $TweetsRepository->getTweetByHashTag($_GET["hashtag"]);
+var_dump($hashtags);
 include('views/home/hashtagHome.php');

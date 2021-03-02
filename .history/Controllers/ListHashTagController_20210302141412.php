@@ -1,4 +1,12 @@
 <?php 
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<br>";
+
 if (empty($_SESSION['id']))
 {
     header('Location: index.php?action=home');
@@ -6,5 +14,6 @@ if (empty($_SESSION['id']))
 require('Repository/TweetsRepository.php');
 $TweetsRepository = new TweetsRepository;
 
-$hashtags = $TweetsRepository->getTweetByHashTag($_GET["hashtag"]);
+$hashtag = $TweetsRepository->getTweetByHashTag($_GET["hashtag"]);
+var_dump($hashtag);
 include('views/home/hashtagHome.php');

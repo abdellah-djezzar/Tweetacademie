@@ -1,5 +1,12 @@
+<!-- <ul class="position-fixed ulAside">
+<li><a href="index.php?action=home">Tweet</a></li>
+<li><a href="index.php?action=tendance">Tendance</a></li>
+<li><a href="index.php?action=hashtag">Hashtag</a></li>
+</ul> -->
+
 <ul class="position-fixed ulAside">
 <li><button class="learn-more"><a href="index.php?action=home">Tweet</a></button></li>
+<li><button class="learn-more"><a href="index.php?action=hashtag">Hashtag</a></button></li>
 <li><button class="learn-more"><a href="index.php?action=homeMessage">Messagerie</a></button></li>
 </ul>
 

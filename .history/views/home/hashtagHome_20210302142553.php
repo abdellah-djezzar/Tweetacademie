@@ -1,7 +1,7 @@
 <?php 
 foreach($hashtags as $hashtag){ ?>
 
-  <div class="tweet-container" style="display: flex; flex-direction: column; margin-top: 6em">
+  <div class="tweet-container mt-5" style="display: flex; flex-direction: column">
   
   <span><a href="<?="index.php?action=profil&id_user=". $hashtag["ID_user"] .""?>">temporaire</a> tweeted :</span>
   <p><?= $hashtag["text"]?></p>

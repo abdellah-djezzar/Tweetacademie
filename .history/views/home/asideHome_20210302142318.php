@@ -1,5 +1,6 @@
 <ul class="position-fixed ulAside">
 <li><button class="learn-more"><a href="index.php?action=home">Tweet</a></button></li>
+<li><button class="learn-more"><a href="index.php?action=Listhashtag">Hashtag</a></button></li>
 <li><button class="learn-more"><a href="index.php?action=homeMessage">Messagerie</a></button></li>
 </ul>
 
