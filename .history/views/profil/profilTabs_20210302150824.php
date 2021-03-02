@@ -28,13 +28,13 @@
           <?php if($checkIfSubToMember == true){?>
           <form action="" method="POST" id="unsubscribe">
           <button type="submit" name="unsubscribe" id="unsubBtn" class="btn btn-primary">Se désabonner</button>
-          <input type="hidden" value="<?=$_GET["id_user"]?>" name="unsubuser">
+            <input type="hidden" value="<?=$_GET["id_user"]?>" name="unsubuser">
           </form>
           <?php } ?>
           
           <?php if($checkIfSubToMember == false){ ?>
           <form action="" method="POST" id="subscribe">
-            <button type="submit" name="subscribe" id="subBtn" class="btn btn-primary">S'abonner</button>
+            <input type="submit" name="subscribe" id="subBtn" value="s'abonner">
             <input type="hidden" value="<?=$_GET["id_user"]?>" name="user">
           </form>
           <?php } ?>
