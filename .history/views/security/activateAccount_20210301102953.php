@@ -1,0 +1,1 @@
+<p>Votre compte est désactivé. Vous pouvez le réactiver en cliquant sur le bouton ci-dessous puis vous reconnecter avec vos identifiants.</p>
