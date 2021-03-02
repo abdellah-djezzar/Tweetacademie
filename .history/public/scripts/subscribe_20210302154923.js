@@ -9,7 +9,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
     })
       .then((response) => response.text())
       .then((response) => {
-        document.getElementById("subBtn").innerHTML = "se désabonner";
+        document.getElementById("subBtn").value = "se désabonner";
+        console.log(document.getElementById("subBtn"));
       })
       .catch((error) => console.log(error));
   });
