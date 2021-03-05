@@ -10,4 +10,4 @@ if(empty($checkLike)){
   $TweetRepository->likeTweet($_SESSION['id'], $_GET["id_tweet"]);
 }
 $countTweet = $TweetRepository->countLikes($_GET["id_tweet"]);
-echo $countTweet[0]["nbrLikes"];
+var_dump($countTweet);
