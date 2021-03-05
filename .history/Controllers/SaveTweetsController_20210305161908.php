@@ -8,7 +8,7 @@ if (empty($_SESSION['id']))
 if(!empty($_POST["postTweet"])){
 
   $tweet = strip_tags($_POST['postTweet']);
-  $Text_max = 140;
+$Text_max = 140;
 
 if(strlen($tweet)>$Text_max){
   

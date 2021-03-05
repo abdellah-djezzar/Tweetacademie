@@ -6,10 +6,11 @@ foreach($showMessage as $message) { ?>
   <span><b><?= $message["pseudo"] ?></b></span>
   <div class="d-flex justify-content-between flex-wrap">
   <p><?= $message["text"] ?></p>
-  <span>Send<?= $message["date"] ?></span>
+  <span>Envoyé le: <?= $message["date"] ?></span>
   </div>
 </div>
 <?php 
   }
+  var_dump($showMessage);
 }
 ?>
