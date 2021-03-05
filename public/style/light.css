@@ -142,7 +142,7 @@ margin:5px;
   color: rgba(63, 63, 61, 0.705);
 }
 #myTab .nav-link.active{ 
-color:#2f9ee2;;
+color:#2f9ee2;
 }
 /* searchbar */
 
@@ -155,4 +155,48 @@ color:#2f9ee2;;
   width:200px;
   border-radius: 16px;
   color: #383b3d;
+}
+
+/* messagerie  (homeMessage.php) */
+.messagerie{
+  margin-top: 5%;
+}
+/* (homeMessage.php) contact :  */
+.chats{
+  background-color:#6dc1f5af;
+  border-radius: 10px;
+  font-size: 12pt;
+  box-shadow:0 0 10px #065183cc;
+}
+.chats a {
+  color:#207db8;
+  text-decoration: none;
+}
+.chats:hover{
+  background-color:#c9dde9;
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+}
+
+/* (sendMessage.php)  */
+.chatMessage{
+  background-color:#6dc1f5af;
+  border-radius: 10px;
+  padding: 2%;
+}
+#sendMessage button{
+  margin-top: 15px;
+}
+
+/* (showMessage.php) */
+.textMsg{
+  color:#1DA1F2;
+  font-size: 10pt;
+  background: rgba(255, 255, 255, 0.685);
+  border-radius: 23px;
+  padding: 7px;
+}
+.textMsg p{
+  padding: 4px;
+  color:#35383abd;
 }

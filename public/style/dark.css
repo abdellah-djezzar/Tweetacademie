@@ -91,6 +91,9 @@ background-color:  rgba(109, 184, 238, 0.699);
   color: #b7c5ce;
   transition: all 0.4s ease-out;
 }
+#count{
+  color:rgba(245, 245, 245, 0.897);
+}
 /* bouton retweet et like */
 .retweetValue {
   width: 120px;
@@ -168,3 +171,44 @@ form h4 {
   color: rgba(255, 255, 255, 0.555);
 }
 
+/* messagerie */
+.messagerie h2{
+  color:white;
+}
+/* (homeMessage.php) contact :  */
+.chats{
+  background-color:rgba(50, 146, 206, 0.836);
+  border-radius: 10px;
+  font-size: 12pt;
+  box-shadow:0 0 15px #1b1b1bcc;
+}
+.chats a {
+  color:#c6dae6;
+  text-decoration: none;
+}
+.chats:hover{
+  background-color:#185579;
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+}
+.chatMessage{
+  background-color:#185579;
+}
+#sendMessage input{
+  background: rgb(221, 226, 230);
+  color:rgba(75, 74, 74, 0.747);
+}
+#sendMessage button{
+  background: rgb(171, 179, 185);
+  color:rgba(46, 44, 44, 0.836);
+}
+#sendMessage button:hover{
+  background-color: white;
+}
+.textMsg{
+ background-color: rgba(194, 211, 228, 0.63);
+ color:#185579;
+}
+.textMsg p{
+  color:rgba(0, 0, 0, 0.705);
+}
