@@ -5,10 +5,25 @@ body {
   background: #414141;
 }
 
+/* inscription */
+.register{
+  background-color: #8580804b;
+}
+#register input{
+  color:whitesmoke;
+  background-color: #575252e5;
+}
+#register input::placeholder{
+  color : whitesmoke;
+}
+#register button{
+color : whitesmoke;
+background-color:  rgba(109, 184, 238, 0.699);
+}
 /*  Home tweet */
 
 .row-home {
-  margin-top: 4em;
+  margin-top: -6em;
 }
 .bodyC {
   background-color: #525252;
@@ -16,7 +31,7 @@ body {
 .add-tweet {
   width: 90%;
   height: 5em;
-  margin-top: 25px;
+  margin-top: 35px;
   border-radius: 7px;
   border: 2px solid rgba(103, 183, 233, 0.7);
   background-color: #525252;
@@ -59,7 +74,7 @@ body {
 }
 /* boutton envoyer */
 .sendTweet {
-  margin-top: 42px;
+  margin-top: 52px;
   margin-left: 3px;
   padding: 3px;
   width: 90px;
@@ -111,17 +126,18 @@ body {
 /* Profil Member */
 
 #margin-top-container-profil {
-  margin-top: 1rem;
+  margin-top: 5rem;
 }
 .prof {
   background: #4caae4be !important;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
 }
-
-/* nav du compte */
-
-.nav-link.active {
-  background-color: #4caae4a4 !important;
+#myTab .nav-link{ 
+  color: rgba(255, 255, 255, 0.726);
+}
+#myTab .nav-link.active{ 
+color:#5fb1e4;
+background: rgba(92, 91, 91, 0.726);
 }
 
 /* searchbar */
@@ -137,8 +153,6 @@ h4 {
   color: whitesmoke;
 }
 
-/* NavBar */
-
 /* modifier le profil  */
 
 .form-control {
@@ -153,3 +167,4 @@ form h4 {
 #formEditProfil input {
   color: rgba(255, 255, 255, 0.555);
 }
+

@@ -204,7 +204,7 @@ class TweetsRepository extends Db {
 
   public function getTweetByHashTag($hashtag)
   {
-    $sql = "SELECT * FROM tweet INNER JOIN user ON tweet.ID_user = user.ID WHERE text LIKE :hashtag";
+    $sql = "SELECT *, DATE_FORMAT(tweet.date, '%W %e %M %Y') AS tweetDate FROM tweet INNER JOIN user ON tweet.ID_user = user.ID WHERE text LIKE :hashtag";
     $query = $this->connect()->prepare($sql);
     $query->execute([
       "hashtag" => "%#".$hashtag . '%'

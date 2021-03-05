@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="row row-home">
 
-  <div class="col-sm-12 col-md-3 d-flex justify-content-center">
+  <div class="col-sm-12 col-md-3 d-flex justify-content-center mt-5">
       <?php include('asideHome.php');?>
   </div>
 

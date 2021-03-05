@@ -1,6 +1,8 @@
 <ul class="position-fixed ulAside">
-<li><button class="learn-more"><a href="index.php?action=home">Tweet</a></button></li>
-<li><button class="learn-more"><a href="index.php?action=homeMessage">Messagerie</a></button></li>
+<li><button class="learn-more mt-3"><a href="index.php?action=home">#Tweet</a></button></li>
+<li><button class="learn-more mt-3"><a href="index.php?action=profil">#My profil</a></button></li>
+<li><button class="learn-more mt-3"><a href="index.php?action=homeMessage">#Messaging</a></button></li>
+<li><button class="learn-more mt-3"><a href="index.php?action=hashtagHome">#Hashtags</a></button></li>
 </ul>
 
 <style>

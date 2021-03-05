@@ -3,32 +3,32 @@
     <div class="col-7">
 
           <div class="mb-3">
-            <label for="username">Votre username:</label>
+            <label for="username">Username :</label>
             <input class="form-control" type="text" id="username" name="username" value="<?= $member->getUsername()?>">
           </div>
 
           <div class="mb-3">
-            <label for="pseudo">Pseudo:</label>
+            <label for="pseudo">Pseudo :</label>
             <input class="form-control" type="text" id="pseudo" name="pseudo" value="<?= $member->getPseudo()?>">
           </div>
 
           <div class="mb-3">
-            <label for="bio">Bio:</label>
+            <label for="bio">Bio :</label>
             <input class="form-control" type="text" id="bio" name="bio" value="<?= $member->getBio()?>">
           </div>
 
           <div class="mb-3">
-         <label for="city">Ville:</label>
+         <label for="city">Ville :</label>
          <input class="form-control" type="text" id="city" name="city" value="<?= $member->getCity()?>">
          </div>
 
          <div class="mb-3">
-         <label for="link">Lien:</label>
+         <label for="link">Link :</label>
          <input class="form-control" type="text" id="link" name="link" value="<?= $member->getLink()?>">
          </div>
 
          <div class="form-group m-5">
-         <button type="submit" class="btn btn-primary">Sauvegarder</button>
+         <button type="submit" class="btn btn-primary">Save changes</button>
          </div>
 
          <input type="hidden" name="profil">

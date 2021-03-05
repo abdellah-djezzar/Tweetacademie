@@ -22,19 +22,19 @@
           <li class="nav-item">
 
           <li class="nav-item" role="presentation">
-            <a class="nav-link" href="index.php?action=sendMessage&id_user=<?=$_GET["id_user"]?>">Envoyer un message</a>
+            <a class="nav-link" href="index.php?action=sendMessage&id_user=<?=$_GET["id_user"]?>">Send a message</a>
           </li>
 
           <?php if($checkIfSubToMember == true){?>
           <form action="" method="POST" id="unsubscribe">
-          <button type="submit" name="unsubscribe" id="unsubBtn" class="btn btn-primary">Se désabonner</button>
+          <button type="submit" name="unsubscribe" id="unsubBtn" class="btn btn-primary">Unfollow</button>
           <input type="hidden" value="<?=$_GET["id_user"]?>" name="unsubuser">
           </form>
           <?php } ?>
           
           <?php if($checkIfSubToMember == false){ ?>
           <form action="" method="POST" id="subscribe">
-            <button type="submit" name="subscribe" id="subBtn" class="btn btn-primary">S'abonner</button>
+            <button type="submit" name="subscribe" id="subBtn" class="btn btn-primary">Follow</button>
             <input type="hidden" value="<?=$_GET["id_user"]?>" name="user">
           </form>
           <?php } ?>
@@ -43,7 +43,7 @@
           <?php }else {?>
             
           <li class="nav-item" role="presentation">
-            <a class="nav-link" id="editprofil-tab" data-toggle="tab" href="#editprofil" role="tab" aria-controls="editprofil" aria-selected="false">Modifier le profil</a>
+            <a class="nav-link" id="editprofil-tab" data-toggle="tab" href="#editprofil" role="tab" aria-controls="editprofil" aria-selected="false">Edit your profil</a>
           </li>
 
         <?php } ?>
