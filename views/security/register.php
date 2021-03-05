@@ -24,10 +24,10 @@
          </div>   
          <span id="errorMail"></span>
 
-         <div class="mb-3">
+         <div class="mb-1">
          <input class="form-control" type="text" id="password" name="password" placeholder="Password">
-         <span id="passwordError"></span>
          </div>
+         <span id="passwordError"></span>
 
          <div class="mb-3">
          <input class="form-control" type="date" id="dob" name="dob">

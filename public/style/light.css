@@ -15,7 +15,7 @@ ul {
 .register{
   background-color: #73bae6;;
 }
-#errorMail, #errorUsername, #errorPseudo{
+#errorMail, #errorUsername, #errorPseudo, #passwordError{
 color:rgba(235, 106, 74, 0.76);
 font-size:13pt;
 padding: 3px;
