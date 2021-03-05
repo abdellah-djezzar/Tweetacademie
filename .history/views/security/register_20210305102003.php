@@ -37,10 +37,10 @@
          <span id="errorUsername"></span>
          </div>
 
-         <div class="mb-3">
+         <div class="mb-1">
          <span id="errorPseudo"></span>
          <input class="form-control" type="text" id="pseudo" name="pseudo" placeholder="Pseudo">
-         <span id="errorPseudo"></span>
+         <span id="error"></span>
          </div>
 
          <div class="form-group">
