@@ -11,18 +11,32 @@ ul {
   padding: 0;
 }
 
+/* inscription */
+.register{
+  background-color: #73bae6;;
+}
+#errorMail, #errorUsername, #errorPseudo{
+color:rgba(235, 106, 74, 0.76);
+font-size:13pt;
+padding: 3px;
+margin:5px;
+}
+
+
+
 /*  Home tweet */
 
 .row-home {
-  margin-top: 4em;
+  margin-top: -6em;
 }
+
 .bodyC {
   background-color: rgba(29, 161, 242, 0.4);
 }
 .add-tweet {
   width: 90%;
   height: 5em;
-  margin-top: 25px;
+  margin-top: 35px;
   border-radius: 7px;
   border: 2px solid rgba(29, 161, 242, 0.7);
   background-color: #eff9ff;
@@ -52,12 +66,14 @@ ul {
   padding: 10px;
   text-align: justify;
 }
+
 .tweet-container a {
   color: rgb(55, 141, 223);
   text-decoration: none;
 }
+/* bouton send tweet  */
 .sendTweet {
-  margin-top: 42px;
+  margin-top: 52px;
   margin-left: 3px;
   padding: 3px;
   width: 90px;
@@ -107,6 +123,7 @@ ul {
   color: rgb(126, 186, 241);
 }
 
+
 @media screen and (max-width: 750px) {
   .position-fixed {
     position: inherit !important;
@@ -116,10 +133,16 @@ ul {
 /* Profil Member */
 
 #margin-top-container-profil {
-  margin-top: 1rem;
+  margin-top: 5rem;
 }
 .prof {
   box-shadow: 0 0 20px rgba(37, 68, 104, 0.8);
+}
+#myTab .nav-link{ 
+  color: rgba(63, 63, 61, 0.705);
+}
+#myTab .nav-link.active{ 
+color:#2f9ee2;;
 }
 /* searchbar */
 
@@ -127,4 +150,9 @@ ul {
   margin-top: 5em;
 }
 
-/* ici ce sont les couleurs par défaut */
+/* aside boutton HOME  */
+.learn-more{
+  width:200px;
+  border-radius: 16px;
+  color: #383b3d;
+}

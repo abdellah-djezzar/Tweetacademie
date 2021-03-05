@@ -13,7 +13,3 @@ foreach($getFollowing as $key => $following){ ?>
 
 <?php }  ?>
 </div>
-
-<br>
-<br>
-<?php var_dump($getFollowing); ?>

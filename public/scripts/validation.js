@@ -18,18 +18,18 @@ function checkMail(e) {
 
       console.log(regex);
       if (data == "e-mail already exist") {
-        document.getElementById("errorMail").innerHTML = "e-mail existante!";
+        document.getElementById("errorMail").innerHTML = "ATTENTION ! E-mail déjà utilisée !";
       } else if (regex & (data == "e-mail available")) {
-        document.getElementById("errorMail").innerHTML = "e-mail disponible";
+        document.getElementById("errorMail").innerHTML = "E-mail disponible. ";
       } else {
-        document.getElementById("errorMail").innerHTML = "e-mail incorrect";
+        document.getElementById("errorMail").innerHTML = "ATTENTION ! E-mail incorrect.";
       }
     })
 
     .catch((err) => {
       console.log("u");
     });
-}
+} 
 
 function checkPseudo(e) {
   e.preventDefault();
@@ -45,9 +45,9 @@ function checkPseudo(e) {
     .then((data) => {
       console.log(data);
       if (data == "pseudo already exist") {
-        document.getElementById("errorPseudo").innerHTML = "le pseudo existe déjà!";
+        document.getElementById("errorPseudo").innerHTML = "ATTENTION ! Le pseudo existe déjà !";
       } else {
-        document.getElementById("errorPseudo").innerHTML = "pseudo disponible";
+        document.getElementById("errorPseudo").innerHTML = "Le pseudo est disponible.";
       }
     })
 
@@ -70,9 +70,9 @@ function checkUsername(e) {
     .then((data) => {
       console.log(data);
       if (data == "pseudo already exist") {
-        document.getElementById("errorUsername").innerHTML = "l'username existe déjà!";
+        document.getElementById("errorUsername").innerHTML = "ATTENTION ! L'username existe déjà!";
       } else {
-        document.getElementById("errorUsername").innerHTML = "username disponible";
+        document.getElementById("errorUsername").innerHTML = "Ce username est disponible.";
       }
     })
 
