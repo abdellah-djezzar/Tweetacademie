@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   document.querySelector("#regForm").addEventListener("submit", (e) => {
     e.preventDefault();
     const inputTweet = document.getElementById("postTweet").value;
+    document.getElementById("count").innerHTML = 500 - inputTweet;
     let form = document.querySelector("#regForm");
 
     fetch("index.php?action=saveTweet", {
@@ -84,8 +85,4 @@ document.addEventListener("DOMContentLoaded", function (event) {
       })
       .catch((error) => console.log(error));
   }
-
-  document.querySelector(".add-tweet").addEventListener("keyup", (e) => {
-    document.getElementById("count").innerHTML = 140 - e.target.value.length + " Characters left";
-  });
 });

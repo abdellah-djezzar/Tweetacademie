@@ -89,15 +89,14 @@ function checkPassword(e) {
   let span = document.querySelector("#passwordError");
 
   if (regex) {
-    span.style.color = "black";
+    span.style.color = "green";
     span.innerHTML = "Valide";
   } else {
-    span.style.color = "black";
-    span.innerHTML = "Minimum eight characters, at least one letter and one number";
+    span.innerHTML = "Mot de passe invalide";
   }
 
   if (passwordVerify.length == "") {
     span.style.color = "black";
-    span.innerHTML = "Must be field";
+    span.innerHTML = " Champs requis";
   }
 }

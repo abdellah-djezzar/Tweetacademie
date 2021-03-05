@@ -82,22 +82,30 @@ function checkUsername(e) {
     });
 }
 
-function checkPassword(e) {
-  let passwordVerify = e.target.value;
-  console.log(e);
-  let regex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d.]{8,}$/.test(passwordVerify);
-  let span = document.querySelector("#passwordError");
+function checkPassword() {
+  let mailVerify = this.value;
+  let regex = /^[a-zA-Z]*$/.test(mailVerify);
+  let span = document.querySelector(".checkName");
 
   if (regex) {
-    span.style.color = "black";
+    span.classList.replace("fa-times", "require");
+    span.style.color = "green";
     span.innerHTML = "Valide";
+    span.classList.replace("require", "fa-check");
+    console.log(regex);
   } else {
-    span.style.color = "black";
-    span.innerHTML = "Minimum eight characters, at least one letter and one number";
+    if (!span.classList.contains("fa-check")) {
+      span.classList.add("fa-check");
+    }
+    span.classList.replace("fa-check", "fa-times");
+    span.style.color = "red";
+    span.innerHTML = " Numéro incorrect";
+    console.log(regex);
   }
 
-  if (passwordVerify.length == "") {
+  if (mailVerify.length == "") {
+    span.classList.replace("fa-check", "require");
     span.style.color = "black";
-    span.innerHTML = "Must be field";
+    span.innerHTML = " Champs requis";
   }
 }

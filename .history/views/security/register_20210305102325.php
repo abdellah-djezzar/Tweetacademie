@@ -26,7 +26,6 @@
 
          <div class="mb-3">
          <input class="form-control" type="text" id="password" name="password" placeholder="Mot de passe">
-         <span id="passwordError"></span>
          </div>
 
          <div class="mb-3">

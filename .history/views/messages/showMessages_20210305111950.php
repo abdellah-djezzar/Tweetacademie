@@ -4,12 +4,11 @@ foreach($showMessage as $message) { ?>
 
 <div class="bg-light light mb-2 text-primary">
   <span><b><?= $message["pseudo"] ?></b></span>
-  <div class="d-flex justify-content-between flex-wrap">
   <p><?= $message["text"] ?></p>
-  <span>Envoyé le: <?= $message["date"] ?></span>
-  </div>
+  <span><?= $message["date"] ?></span>
 </div>
 <?php 
   }
 }
+var_dump($showMessage);
 ?>

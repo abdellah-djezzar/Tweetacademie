@@ -8,4 +8,4 @@
       </form>
 </div>
 <?php 
-} ?>
+} var_dump($retweets)?>

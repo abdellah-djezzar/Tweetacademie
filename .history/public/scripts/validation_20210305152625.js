@@ -83,21 +83,5 @@ function checkUsername(e) {
 }
 
 function checkPassword(e) {
-  let passwordVerify = e.target.value;
-  console.log(e);
-  let regex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d.]{8,}$/.test(passwordVerify);
-  let span = document.querySelector("#passwordError");
-
-  if (regex) {
-    span.style.color = "black";
-    span.innerHTML = "Valide";
-  } else {
-    span.style.color = "black";
-    span.innerHTML = "Minimum eight characters, at least one letter and one number";
-  }
-
-  if (passwordVerify.length == "") {
-    span.style.color = "black";
-    span.innerHTML = "Must be field";
-  }
+  console.log("ok");
 }

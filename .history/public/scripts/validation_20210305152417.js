@@ -82,22 +82,21 @@ function checkUsername(e) {
     });
 }
 
-function checkPassword(e) {
-  let passwordVerify = e.target.value;
-  console.log(e);
+function checkPassword() {
+  let passwordVerify = this.value;
   let regex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d.]{8,}$/.test(passwordVerify);
   let span = document.querySelector("#passwordError");
 
   if (regex) {
-    span.style.color = "black";
+    span.style.color = "green";
     span.innerHTML = "Valide";
   } else {
-    span.style.color = "black";
-    span.innerHTML = "Minimum eight characters, at least one letter and one number";
+    span.innerHTML = "Mot de passe invalide";
   }
 
-  if (passwordVerify.length == "") {
+  if (mailVerify.length == "") {
+    span.classList.replace("fa-check", "require");
     span.style.color = "black";
-    span.innerHTML = "Must be field";
+    span.innerHTML = " Champs requis";
   }
 }

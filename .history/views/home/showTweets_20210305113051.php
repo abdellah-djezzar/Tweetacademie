@@ -9,11 +9,11 @@ foreach($retweets as $retweet){ ?>
 
   <p value="<?=$retweet["textTweet"]?>"><?= $retweet["textTweet"]?></p>
 
-
   <form style="display: inline" action="" method="POST" class="retweet">
         <input type="hidden"  name="id_user">
         <button type="submit" class="retweetValue" value="<?= $retweet["IDTweet"]?>" name="id_tweet">Retweet</button>
   </form>
+
   <form action="" method="POST" class="likeForm">
   <?php if($retweet["isLiked"] == 0) { ?>
   <button type="submit" class="likeValue far fa-heart" name="id_tweet" value="<?= $retweet["IDTweet"]?>"></button>
@@ -34,8 +34,7 @@ foreach($tweets as $tweet){ ?>
 
   <div class="tweet-container" style="display: flex; flex-direction: column">
   
-  <span><a href="<?="index.php?action=profil&id_user=". $tweet["UserIDTweet"] .""?>"><?=$tweet["pseudo"]?></a> tweeted on <?= $tweet["dateTweet"]?></span>
-
+  <span><a href="<?="index.php?action=profil&id_user=". $tweet["UserIDTweet"] .""?>"><?=$tweet["pseudo"]?></a> tweeted :</span>
   <p value="<?=$tweet["textTweet"]?>"><?= $tweet["textTweet"]?></p>
         <form style="display: inline" action="" method="POST" class="retweet">
         <input type="hidden" name="id_user">

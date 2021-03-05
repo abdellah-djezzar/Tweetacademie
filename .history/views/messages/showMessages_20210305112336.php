@@ -12,4 +12,5 @@ foreach($showMessage as $message) { ?>
 <?php 
   }
 }
+var_dump($showMessage);
 ?>

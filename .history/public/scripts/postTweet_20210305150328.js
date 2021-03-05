@@ -42,7 +42,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
   loadTweet();
 
   document.querySelector("#regForm").addEventListener("submit", (e) => {
-    e.preventDefault();
     const inputTweet = document.getElementById("postTweet").value;
     let form = document.querySelector("#regForm");
 
@@ -85,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       .catch((error) => console.log(error));
   }
 
-  document.querySelector(".add-tweet").addEventListener("keyup", (e) => {
-    document.getElementById("count").innerHTML = 140 - e.target.value.length + " Characters left";
+  document.querySelector("#test").addEventListener("keyup", (e) => {
+    console.log("ok");
   });
 });

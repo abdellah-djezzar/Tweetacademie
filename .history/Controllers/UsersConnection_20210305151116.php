@@ -24,7 +24,7 @@ if (isset($_SESSION['id']))
             !empty($_POST["pseudo"]) && preg_match("/[a-zA-Zéàèî]*/", $_POST["pseudo"]) && ($checkPseudo == FALSE) &&
             !empty($_POST["dob"]) && 
             !empty($_POST["email"]) && filter_var($_POST["email"], FILTER_VALIDATE_EMAIL) && ($checkEmail == FALSE) &&
-            !empty($_POST["password"]) && preg_match("/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d.]{8,}$/", $_POST["password"])){ 
+            !empty($_POST["password"]) && preg_match("/[a-zA-Z]*/", $_POST["password"])){ 
 
 
             $HashedPassword = password_hash($_POST['password'], PASSWORD_DEFAULT);

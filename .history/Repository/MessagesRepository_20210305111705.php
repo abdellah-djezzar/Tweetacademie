@@ -17,7 +17,7 @@ class MessagesRepository extends Db {
 
   public function getMessage(int $adresse_id, int $id_user) :array
   {
-    $sql = "SELECT text, pseudo, NOW() as date from message INNER JOIN user ON message.ID_user = user.ID WHERE adressee_id = :adresse_id AND ID_user = :id_user OR adressee_id = :id_user AND ID_user = :adresse_id ORDER BY message.ID DESC";
+    $sql = "SELECT text, pseudo, DATE_FORMAT(date_inscription, '%d/%m/%Y') from message INNER JOIN user ON message.ID_user = user.ID WHERE adressee_id = :adresse_id AND ID_user = :id_user OR adressee_id = :id_user AND ID_user = :adresse_id ORDER BY message.ID DESC";
     $query = $this->connect()->prepare($sql);
     $query->execute([
       "adresse_id" => $adresse_id,

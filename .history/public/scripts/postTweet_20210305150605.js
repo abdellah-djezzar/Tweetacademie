@@ -86,6 +86,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
   }
 
   document.querySelector(".add-tweet").addEventListener("keyup", (e) => {
-    document.getElementById("count").innerHTML = 140 - e.target.value.length + " Characters left";
+    document.getElementById("count").innerHTML = "Characters left: " + (500 - e.target.value.length);
   });
 });

@@ -167,7 +167,7 @@ class TweetsRepository extends Db {
 
   public function showTweets() : array
   {
-    $sql = "SELECT tweet.ID as IDTweet, tweet.text as textTweet, tweet.ID_user as UserIDTweet, user.pseudo as pseudo, DATE_FORMAT(tweet.date, '%W %e %M %Y') as dateTweet, IF(aime.ID_user IS NULL, 0, 1) as isLiked FROM tweet 
+    $sql = "SELECT tweet.ID as IDTweet, tweet.text as textTweet, tweet.ID_user as UserIDTweet, user.pseudo as pseudo, tweet.date as dateTweet, IF(aime.ID_user IS NULL, 0, 1) as isLiked FROM tweet 
     INNER JOIN user ON tweet.ID_user = user.ID 
     LEFT JOIN aime ON tweet.ID = aime.ID_tweet
     WHERE user.deleted = 0

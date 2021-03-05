@@ -98,6 +98,6 @@ function checkPassword(e) {
 
   if (passwordVerify.length == "") {
     span.style.color = "black";
-    span.innerHTML = "Must be field";
+    span.innerHTML = " Champs requis";
   }
 }

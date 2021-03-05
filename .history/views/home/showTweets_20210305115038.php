@@ -5,9 +5,10 @@ foreach($retweets as $retweet){ ?>
 
   <div class="tweet-container" style="display: flex; flex-direction: column">
  
-  <span>Tweet of <a href="<?="index.php?action=profil&id_user=". $retweet['UserIDTweet'] .""?>"><?=$retweet["pseudo"]?></a> retweeted by <a href="<?="index.php?action=profil&id_user=". $_SESSION['id'] .""?>"><?=$_SESSION["pseudo"]?></a> on <?= $retweet["dateTweet"]?></span>
+  <span>Tweet of <a href="<?="index.php?action=profil&id_user=". $retweet['UserIDTweet'] .""?>"><?=$retweet["pseudo"]?></a> retweeted by <a href="<?="index.php?action=profil&id_user=". $_SESSION['id'] .""?>"><?=$_SESSION["pseudo"]?></a></span>
 
   <p value="<?=$retweet["textTweet"]?>"><?= $retweet["textTweet"]?></p>
+  <span class="mr-auto">on <?= $retweet["dateTweet"]?></span>
 
 
   <form style="display: inline" action="" method="POST" class="retweet">

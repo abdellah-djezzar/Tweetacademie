@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       .catch((error) => console.log(error));
   }
 
-  document.querySelector(".add-tweet").addEventListener("keyup", (e) => {
-    document.getElementById("count").innerHTML = 140 - e.target.value.length + " Characters left";
+  document.getElementById("test").addEventListener("keyup", (e) => {
+    console.log("ok");
   });
 });
