@@ -13,7 +13,7 @@ class TweetsRepository extends Db {
     ]);
   }
 
-  public function countTweet(string $id_user)
+  public function countTweet(string $id_user) :array
   {
     $sql = "SELECT COUNT(ID) as tweets FROM tweet WHERE ID_user = :id_user";
     $query = $this->connect()->prepare($sql);
