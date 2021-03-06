@@ -14,8 +14,8 @@ if($_GET['action'] == 'sendMessage'){
   include('views/messages/sendMessage.php');
 }else{
 ?>
-<h2 class="display-5 text-center mt-5"><br><br><br><br>You don’t have a message selected <br><small>
-Choose one from your existing messages, or start a new one !</small></h2>
+<h2 class="display-5 text-center mt-5"><br><br><br><br>You don’t have a conversation selected <br><small>
+Choose one from your existing messages !</small></h2>
 <?php } ?>
 </div>
 </div>

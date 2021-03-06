@@ -18,7 +18,7 @@ body {
 }
 #register button{
 color : whitesmoke;
-background-color:  rgba(109, 184, 238, 0.699);
+background-color:  rgba(70, 152, 211, 0.952);
 }
 /*  Home tweet */
 
@@ -211,4 +211,19 @@ form h4 {
 }
 .textMsg p{
   color:rgba(0, 0, 0, 0.705);
+}
+
+/* :activate account */
+h5{
+  color: whitesmoke;
+}
+.formActivate{
+  width:400px;
+  height: 300px;
+  padding: 4%;
+  display: block;
+  margin: auto;
+  background: rgba(110, 102, 102, 0.658);
+  box-shadow:0 0 22px rgba(10, 10, 10, 0.8);
+color: whitesmoke;
 }
