@@ -2,7 +2,8 @@
 <li><button class="learn-more mt-3"><a href="index.php?action=home">#Tweet</a></button></li>
 <li><button class="learn-more mt-3"><a href="index.php?action=profil">#My profil</a></button></li>
 <li><button class="learn-more mt-3"><a href="index.php?action=homeMessage">#Messaging</a></button></li>
-<li><button class="learn-more mt-3"><a href="index.php?action=hashtagHome">#Hashtags</a></button></li>
+<li><button class="learn-more mt-3"><a href="index.php?action=searchBar">#Search</a></button></li>
+<li><button class="learn-more mt-3"><a href="index.php?action=ListHashTag">#Hashtags</a></button></li>
 </ul>
 
 <style>
@@ -41,4 +42,3 @@ h4{
           transition: transform 150ms cubic-bezier(0, 0, 0.50, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
         }
 </style>
-<!-- Si quelqu'un peut display les button au centre du aside de home svp -->

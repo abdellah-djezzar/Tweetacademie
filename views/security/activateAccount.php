@@ -7,13 +7,14 @@ if(isset($_GET["msg"])) {
 }
 ?>
 <div class="container-fluid mt-5">
-<form action="" method="POST">
-<label for="email">Email :</label>
+<form action="" method="POST" class="formActivate">
+  <p class="text-center">Please enter your information.</p>
+<label class="mt-2" for="email">Email :</label>
 <input type="text" id="email" name="email">
 <br>
 <label for="password">Password :</label>
 <input type="text" id="password" name="password">
 <input type="hidden" name="login">
-<button type="submit" class="btn btn-primary">Send !</button>
+<button type="submit" class="btn btn-primary mt-5 float-right">Reactivate !</button>
 </form>
 </div>

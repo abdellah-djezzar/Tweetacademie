@@ -22,7 +22,17 @@ padding: 3px;
 margin:5px;
 }
 
+/* activate account  */
 
+.formActivate{
+  width:400px;
+  height: 300px;
+  padding: 4%;
+  display: block;
+  margin: auto;
+  box-shadow:0 0 20px rgba(77, 77, 77, 0.8);
+  background: rgba(214, 214, 214, 0.658);
+}
 
 /*  Home tweet */
 
